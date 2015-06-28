@@ -1,0 +1,332 @@
+#+STARTUP: showall indent
+#+STARTUP: hidestars
+#+BEGIN_HTML
+---
+layout: post
+title: DocOps: Automating Collaborative Documentation
+excerpt: none
+---
+#+END_HTML
+
+* How does this help us?
+
+Modern day software aided projects often have a wealth of documentation for using the platform and trouble-shooting the problems withing. This exists in formal documentation for the project, and the formal documentation for all its software and hardware dependencies, in-line code documentation, list-serv's, IRC chats, google docs, wiki's, meeting notes, and a variety of other informal methods such as post-its and "just ask Georgia". Sadly most projects documentation is are profoundly decentralized and challenging for even an advanced user to locate, navigate, and identify as up-to-date and accurate. Newer users, who are best positioned to write "new user & installation guides" are even worse off. They have to learn a myriad issue submission, or publication platforms before they can contribute documentation help or edits as well as identify the rarely documented social conventions required to get their submission acted upon. By this time they are no longer new users, and have lost much of the key experience that makes their input so valuable.
+
+Documentation needs to make it easy for users, partners, and future collaborators to consume, update, customize, localize, and translate. More so, truly good documentation does all this automatically and consistently over time leading to an iterative stewardship process instead of a sporadic process of massive re-reading and re-writes.
+
+- http://www.australiancurriculum.edu.au/static/docs/Benefits%20of%20a%20Machine%20Readable%20Curricula.pdf
+
+* Sample Workflow
+
+This sample workflow attempts to show how a documentation operations workflow can be used to create complex multi-source publications in a robust reproducible manner.
+
+** Content Creation
+*** standardization
+Determine standards for document creation so that it can be consumed and cleaned automatically
+*** creation
+initial creation of sources
+*** meta-data addition
+Using various automated and human process' to add meta-data to internally created sources.
+**** attribution
+Proper attribution and licensing of sources needs to be added to sources in an accessible way so that they can be used externally.
+**** access controls
+Documentation needs to be tagged for levels of release if there is content that is not to be distributed to certain parties.
+*** verification
+- Internally created sources need to be verified as good, and accurate through editing, peer review, etc.
+- Sources need to be verified as having proper access controls for release.
+** Document specification
+*** Mapping
+The sources that the document will be created from need to be identified,
+*** Transformation specification
+The method for transforming sources into a consistent format needs to be specified
+*** Pattern specification
+Publication/Design patterns need to be created and assigned to specific publication objects. (e.g. object->latex transformations)
+*** Workflow Creation
+Workflow events, alerts, roles, and checks need to be determined and put into the automation pipeline to streamline human intervention.
+** Collection
+*** extraction
+External and internal sources need to be extracted and placed into a central location
+*** archiving
+All sources should be archived in their raw format so that historical documents can be verified both internally and independently. This also allows for continued use of external content that becomes unavailable.
+*** cleaning
+Non-standardized content needs to be cleaned for use.
+*** Attribution and access control
+Content should be tagged with proper attribution and access control flags
+*** verifying
+Sources should be checked through automated means to ensure that they contained the requested content. This is where archived sources could be automatically pulled in for non-temporal content and where alerts would need to be created and human intervention possibly required to address missing or malformed content.
+** Aggregation
+*** transformation
+Sources will have their content transformed to a standardized medium and structure.
+*** mapping
+All source objects will be linked to a global document map.
+*** verifying
+At this point the map can be checked through an automated means to ensure that it has all the sources that it needs to output any document required of it.
+*** merging
+A single standardized source will be created from the global map of content.
+*** attribution and access control
+Multi-Source attribution and access control flags will be applied to all objects that are created to ensure that publication pipelines do not misuse or mis-attribute content.
+*** archiving
+The core map should be archived at this point. This will allow for quick iteration on publication maps and transformation and the easy creation of one-off documents without re-aggregating content.
+** Publication
+*** access control
+If ANY sensitive or internal documents are created using the same publication system as external documents publication should have clear allowable content and access level controls.
+*** mapping
+Publication end-points will need to have maps that describe the output document/file/repository structure in relationship to the single-source map created during aggregation and the patterns specified in the document specification section.
+*** transforming
+Sources will be aggregated into a single object as defined by the publication map and then transformed using the patterns defined in the publication map.
+*** verification
+The final output should be verified using automated testing as well as through human review.
+*** archiving
+The final published outputs should be archived for externally facing archival and support purposes.
+
+
+* Humans: Supporting the Social Side of the Publication Pipeline
+You automate the documentation creation workflow, you can't entirely automate the documentation
+
+** Publication Pipelines
+  - http://sempublishing.sourceforge.net/
+  - Workflow / process
+    - http://www.essepuntato.it/lode/http://purl.org/spar/pwo
+  - People
+    - http://www.essepuntato.it/lode/http://purl.org/spar/pro
+  - Document management
+    - http://www.essepuntato.it/lode/http://purl.org/spar/pso
+  - Document Creation
+    - [[http://lov.okfn.org/dataset/lov/vocabs/pdo][Project Documents Ontology]]
+  - Review http://bibliocloud.com/
+[[images/blog/automated_documentation/pipeline.svg]]
+** Documentation Choreography
+- Service Choreography
+- http://www.w3.org/TR/ws-cdl-10/
+ - Goals
+   - More specifically, the goals of the WS-CDL specification are to permit:
+
+   - Reusability. The same choreography definition is usable by different participants operating in different contexts (industry, locale, etc.) with different software (e.g. application software)
+
+   - Cooperation. Choreographies define the sequence of exchanging messages between two (or more) independent participants or processes by describing how they should cooperate
+
+   - Multi-Party Collaboration. Choreographies can be defined involving any number of participants or processes
+
+   - Semantics. Choreographies can include human-readable documentation and semantics for all the components in the choreography
+
+   - Composability. Existing choreographies can be combined to form new choreographies that may be reused in different contexts
+
+   - Modularity. Choreographies can be defined using an "inclusion" facility that allows a choreography to be created from parts contained in several different choreographies
+
+   - Information Driven Collaboration. Choreographies describe how participants make progress within a collaboration, through the recording of exchanged information and changes to observable information that cause ordering constraints to be fulfilled and progress to be made
+
+   - Information Alignment. Choreographies allow the participants that take part in choreographies to communicate and synchronize their observable information
+
+   - Exception Handling. Choreographies can define how exceptional or unusual conditions that occur while the choreography is performed are handled
+
+   - Transactionality. The processes or participants that take part in a choreography can work in a "transactional" way with the ability to coordinate the outcome of the long-lived collaborations, which include multiple participants, each with their own, non-observable business rules and goals
+** Automation
+  - Mining Communication Channels for Needed Documentation and FAQ's
+    - issue cue's
+    - listserv questions
+      - Commonly users are guided to links to similar questions on a project listserv. This requires expert communicators with historical memory to be available when the question is asked.
+      - Capturing, tagging, etc. the content from list-serv questions into a more easily searchable and filterable "FAQ" will allow even newer members of the community to guide new users to a more generalized answer to their problem.
+    - IRC bots
+
+** Human Readable Events: Logging to support process instead of debugging
+
+*** Process focused logging of of events in the publication pipline should refer to the publication scale objects, and not the tools that run them.
+  - Missing meta-data should speak to the "source" of that data instead of the error in the tool. /NOTE: the all structure and content types for these examples are made up and do not accurately reflect the guidance throughout the rest of this piece./
+
+    - e.g. "The /new/ _how to start_ section in the _beginner setup source_ is missing an _access control designation_. This content was last authored by _Jane Smith_. The default _access control_ designation of "private" will be assigned to this object. Please either... Provide _Approval_ or add an _access control designation_ to this source and then _reload this source_. Publication is stalled until one of these actions is taken."
+
+This alert is targeted at a publication source. It clearly tells the person in the assigned role what new content has been added, enough context for the user to understand what is going on, who they might want to contact to solve the issue, where the content is located contained, what issue needs to be resolved, and how to go about resolving it. Underlined text above should be links to the places where the person can take action, or to definitions of special terms (like _access control designation_.)
+
+This alert shows how alerts that are publication pipeline facing should be alerts that give the information that a *user* of the process can use to update or address content errors. These should be seperate than technological.
+
+    - e.g. "The publication process  from _January 5th, 2015_ is /paused/ at the _collection stage_. There are _5 assigned_ and _1 unassigned_ tasks that need to be completed before it can continue."
+
+This more public alert
+
+    - e.g. "The _how to start_ section in the _beginner setup_ source has changed since the _last completed publication_."
+
+  in the documentation should be  accurately reflect revision changes based upon the larger documentation elements instead of by file/line of text. "The description of project X has changed instead of /projects/X/description was changed."
+- This also allows for central logging of changes that occur at various end-points that do not have long-term revision control.
+
+*** The software in the publication pipeline should run at human speed.
+  - When decisions need to be made
+
+* Creation: The components of collaborative documentation
+
+**
+
+** Make Finding Editable Content Easy
+- Seperate the publishing code / content from the text
+  - [[https://the-engine-room.github.io/rdf-primer/][Awesome publications]] with content stuck in a [[https://github.com/the-engine-room/rdf-primer][publication program specific repository structure]] makes it difficult for users who are unfamiliar with the publishing platform to contribute content.
+
+** Make content easy to edit for those outside the core publishing pipeline
+*** Contributors should have an interface that makes contribution easy
+  - The rise of Github & The failed promise of git
+    - DONE [[http://www.codersgrid.com/2014/04/07/gitbook-build-your-programming-book-with-interactive-exercises/][GitBook, Build Your Programming Book With Interactive Exercises]]
+    - Review [[http://railsware.com/blog/2014/04/16/creating-books-with-gitbook/][Creating books with GitBook | Railsware Blog]]
+    - Review [[https://felixfan.github.io/rstudy/2014/04/22/gitbook/][Statistics and Programming!]]
+    - Review [[http://cms.chun.pro/post/agZjaHVjbXNyEgsSBFBvc3QiCG0ZYCcmHCE5DA/gitbook][Gitbook - Chu's CMS]]
+    - REVIEW https://draftin.com/
+*** A project needs documentation standards
+  - http://sempublishing.sourceforge.net/
+  - Those standards need to be clearly documented
+
+*** Documentation standards need to be automatically enforce
+- Automating the creation of documentation issue creation on new releases / API changes / etc.
+  - Issues that have project staff check the corresponding documentation sections for where changes occur
+  - git-hooks
+    - why use git hooks?
+      - automating meta-data allows for all manner of wonders
+        - Meta-Data is really important for any of this to work
+      - automating alerts to previous authors of documentation
+      - automating README table-of-contents, etc.
+      - automating backup / caching of links (see link caching to avoid dead links to external references)
+  - github web-hooks
+    - https://developer.github.com/
+    - https://developer.github.com/changes/2015-04-21-organization-hooks-api-finalized/
+  - automating indexing
+    - semantically enforced tag creation
+
+*** Monitoring tool/project end-points for documentation needs
+
+
+
+** Aggregation and Re-Use
+
+- Use Consistent Long-term URI's
+  - for metadata
+    - Using a long-term URI for source meta-data allows the URI of content to be modified without requiring all documentation being published from those sources to be updates.
+
+- Make content available and repurposeable
+  - [[http://www.fabriders.net/rrcmdraft-2/][resource creator manifesto]]
+  - [[http://www.w3.org/TR/2014/NOTE-ld-bp-20140109/][Best Practices for Publishing Linked Data]]
+- Code Documentation and API's
+  - literate programming
+  - doxygen, etc.
+
+** Automation
+
+  - leveraging your version control system
+
+
+* Collection: The components of automated documentation
+
+- metadata is vital
+- standardization is key
+- source consumption
+  - Multi-Source Publication
+    - content
+      - sub-project content consumption
+        - Meta-Data
+          - project descriptions, authors, staff, copyright, etc.
+        - documentation
+
+** Existing Ontologies for Specifying and Reusing Content
+  - [[https://www.openarchives.org/ore/][Open Archives Initiative Object Reuse and Exchange]]
+  - [[http://guava.iis.sinica.edu.tw/r4r][Relations for Reusing (R4R) Ontology]]
+  - Responsible usage
+    - [[http://lov.okfn.org/dataset/lov/vocabs/opmo][The Open Provenance Model]] is a model of provenance that is designed to meet the following requirements: (1) To allow provenance information to be exchanged between systems, by means of a compatibility layer based on a shared provenance model. (2) To allow developers to build and share tools that operate on such a provenance model. (3) To define provenance in a precise, technology-agnostic manner. (4) To support a digital representation of provenance for any 'thing', whether produced by computer systems or not. (5) To allow multiple levels of description to coexist. (6) To define a core set of rules that identify the valid inferences that can be made on provenance representation.
+    - [[http://lov.okfn.org/dataset/lov/vocabs/opmv][OPMV, the Open Provenance Model Vocabulary, provides terms to enable practitioners of data publishing to publish their data responsibly.]]
+
+
+** logic based source identification
+Meta-data URI's allow for
+
+*Example:* The below example shows one use case where the use of a long-term URI allows the documentation to identify the guide that describes the most up-to-date version of the software.
+
+/NOTE: this is entirely pseudo-code and is not a recommendation and does not reflect the guidance or API's described throughout the rest of this piece./
+#+BEGIN_SRC python
+  # We are lookign for the guide for the latest version of the software
+  latest_guide_version = 0.0
+  latest_guide = None
+
+  # We get the projects metadata object
+  metadata_source = get_source("https://targeted_project/installation_guide.metadata")
+
+  # We retreive all the software documentation object metadatay
+  all_guides = metadata_source.get_all("guides")
+
+  for guide in all_guides:
+      software_version = datetime(guide.version)
+      if software_version > latest_guide_version:
+          latest_guide = guide.URI
+          latest_guide_version = software_version
+
+  return latest_guide
+
+#+END_SRC
+
+
+**  Scraping project data for documentation
+
+*** Code Documentation
+- doxygen, etc
+*** Build and Testing Documentation
+- Infrastructure for providing key-data for users
+  - Tracking the current software state
+    - https://travis-ci.org/
+  - Tracking where users can get software
+
+  - Tracking testing & needs
+    - https://coveralls.io/
+
+** Test driven documentation
+  - Link checking
+    - https://github.com/gajus/deadlink
+  - Link Caching to avoid dead references
+    - Wayback Machines API
+      - https://github.com/elationfoundation/waybackcheck
+    - On-Site Caching
+      - Memento
+        - http://mementoweb.org/depot/native/ia/
+      - Amber
+        - http://amberlink.org/
+* Aggregation
+
+    - object requirements meta-data
+      - Using standardized defininitions of types of documentation to allow tracking of complete and incomplete elements in documentation allows you to automate its inclusion based upon its completeness.
+      - This also allows for automation of styling based upon *where* a markdown object is located, what it is called, and its meta-data instead of having in-line styling.
+      - these requirements allow for logging of changes in the documentation that accurately reflect revision changes based upon the larger documentation elements instead of by file/line of text. "The description of project X has changed instead of /projects/X/description was changed."
+        - This also allows for central logging of changes that occur at various end-points that do not have long-term revision control.
+
+
+* Publication
+
+** Multi-Destination Publication
+  - Creating multiple end-points
+    - [[https://en.wikipedia.org/wiki/Single_source_publishing][Single source publishing]]
+    - Building published content based on style sheets
+
+- Multiple formats
+  - Produce polished content in multiple formats for different types of consumption
+    - plain text
+    - pdf
+    - odt/doc
+    - http
+
+** Access Controls
+- Access controls, security, and distribution of documentation
+  - If ANY sensitive or internal documents are created using the same publication system as external documents publication should have clear allowable content and access level controls.
+  - This allows externally facing documents to be created using the same templates as internally facing documents with different access controls specified.
+  - This reduces document duplication and helps to ensure that ALL documentation is updated when a change is made to the documentation back-end.
+  - meta-data based publication controls
+  - building security and authentication into the endpoint collection process
+  - Content creation based upon the level of access of the audience it is to be shared with.
+      - rapid sanitized documentation creation for a less or more privileged audience can be automated through secured end-points that contain more sensitive information and flags at documentation creation time that determine what index items will be added.
+  - Caution/warnings can be added to documents about sharing when sensitivity of atomized documentation increases and therefore the final document should not be shared.
+
+** Styling
+  - Markup/down pre-processors
+    - https://pythonhosted.org/Markdown/extensions/api.html
+    - https://github.com/jreese/markdown-pp
+    - https://github.com/gajus/gitdown#features-find-dead-urls-and-fragment-identifiers
+** Graphics
+  - automated graphic construction
+    - graphing out workflows, content structure, and other information using graphviz markdown to show object relationships in meta-data and object's to include in graphics in index files.
+    - http://www.graphviz.org/
+    - doxygen - code
+** Archiving and history preservation
+- automating polished content responsibly
+  - Marking versions
+  - documenting changes (version control)
+    - See: Human readable logging
