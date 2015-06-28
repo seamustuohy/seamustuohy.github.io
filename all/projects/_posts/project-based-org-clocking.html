@@ -1,0 +1,841 @@
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Colors</a></li>
+<li><a href="#sec-2">2. Projects</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Project File</a></li>
+<li><a href="#sec-2-2">2.2. Project Properties</a></li>
+<li><a href="#sec-2-3">2.3. Project States</a></li>
+<li><a href="#sec-2-4">2.4. <span class="todo TODO">TODO</span> Identifying active projects</a></li>
+<li><a href="#sec-2-5">2.5. <span class="todo TODO">TODO</span> Project directories and projectile</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Tasks</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Task File</a></li>
+<li><a href="#sec-3-2">3.2. Task helpers</a></li>
+<li><a href="#sec-3-3">3.3. Types of tasks</a></li>
+<li><a href="#sec-3-4">3.4. Task States</a>
+<ul>
+<li><a href="#sec-3-4-1">3.4.1. Basic Tasks</a></li>
+<li><a href="#sec-3-4-2">3.4.2. Updating a tasks status when states change</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Events</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Events File</a></li>
+<li><a href="#sec-4-2">4.2. Event Properties</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Email</a>
+<ul>
+<li><a href="#sec-5-1">5.1. <span class="todo TODO">TODO</span> Received new message</a>
+<ul>
+<li><a href="#sec-5-1-1">5.1.1. If encrypted</a></li>
+<li><a href="#sec-5-1-2">5.1.2. get projects</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-2">5.2. <span class="todo TODO">TODO</span> Open a message</a>
+<ul>
+<li><a href="#sec-5-2-1">5.2.1. Create an org entry of the email</a></li>
+<li><a href="#sec-5-2-2">5.2.2. Add project category to entry from message tag</a></li>
+<li><a href="#sec-5-2-3">5.2.3. Start clocking to the message</a></li>
+<li><a href="#sec-5-2-4">5.2.4. Create global variable of message that was opened (so that when we stop clocking we don't have to query the original message that opened the thread)</a></li>
+<li><a href="#sec-5-2-5">5.2.5. decrypt message</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-3">5.3. <span class="todo TODO">TODO</span> Close a message</a>
+<ul>
+<li><a href="#sec-5-3-1">5.3.1. If clocking this message,</a></li>
+<li><a href="#sec-5-3-2">5.3.2. If not clocking for some reason</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-4">5.4. <span class="todo TODO">TODO</span> Reply to a message</a>
+<ul>
+<li><a href="#sec-5-4-1">5.4.1. Create an org-entry for the reply</a></li>
+<li><a href="#sec-5-4-2">5.4.2. If adding contacts</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-5">5.5. <span class="todo TODO">TODO</span> Send Reply</a>
+<ul>
+<li><a href="#sec-5-5-1">5.5.1. Check to,cc,bcc contacts</a></li>
+<li><a href="#sec-5-5-2">5.5.2. Get message ID from server and replace temporary ID with that ID</a></li>
+<li><a href="#sec-5-5-3">5.5.3. Stop clocking</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-6">5.6. <span class="todo TODO">TODO</span> Close reply without sending</a>
+<ul>
+<li><a href="#sec-5-6-1">5.6.1. stop clocking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Capture</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Adding/Capturing Objects</a></li>
+<li><a href="#sec-6-2">6.2. Archiving Objects</a>
+<ul>
+<li><a href="#sec-6-2-1">6.2.1. Projects</a></li>
+<li><a href="#sec-6-2-2">6.2.2. Tasks</a></li>
+<li><a href="#sec-6-2-3">6.2.3. Events</a></li>
+</ul>
+</li>
+<li><a href="#sec-6-3">6.3. Workflow</a>
+<ul>
+<li><a href="#sec-6-3-1">6.3.1. <span class="todo TODO">TODO</span> prompt for TODO Item</a></li>
+<li><a href="#sec-6-3-2">6.3.2. <span class="todo TODO">TODO</span> Create entry</a></li>
+<li><a href="#sec-6-3-3">6.3.3. <span class="todo TODO">TODO</span> prompt for project</a></li>
+<li><a href="#sec-6-3-4">6.3.4. <span class="todo TODO">TODO</span> If capture requires a "with" entry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Contacts</a>
+<ul>
+<li><a href="#sec-7-1">7.1. Helm Search for contacts</a>
+<ul>
+<li><a href="#sec-7-1-1">7.1.1. <span class="todo TODO">TODO</span> How do I use helm in capture templates</a></li>
+</ul>
+</li>
+<li><a href="#sec-7-2">7.2. <span class="todo TODO">TODO</span> Contacts tagged with projects and teams that they are involved in</a></li>
+<li><a href="#sec-7-3">7.3. <span class="todo TODO">TODO</span> contacts with "encrypt" category force encryption of messages sent to them</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+---
+layout: post
+title: Automating my projects with org-mode
+excerpt:
+---
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Colors</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defvar org-todo-colors-status-future "MediumSpringGreen")
+(defvar org-todo-colors-status-current "DarkOrange1")
+(defvar org-todo-colors-status-upcoming "DarkGoldenrod1")
+(defvar org-todo-colors-status-urgent "red1")
+(defvar org-todo-colors-status-completed "DarkTurquoise")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Projects</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Properties are the core object of my time-tracking system. They are how I organize what I can track time against and do billing with. <del>Unlike other org systems I want to keep my tasks seperate from my top-level project headers. This will allow me to cleanly seperate my projects from a variety of task files that relate to them.</del>
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Project File</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Projects should be stored somewhere. I am going to store them in a central file.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defvar org-project-project-file (true-filename "~/.org/projects.org"))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><a id="the-UUID-of-an-object" name="the-UUID-of-an-object"></a><span class="section-number-3">2.2</span> Project Properties</h3>
+<div class="outline-text-3" id="text-2-2">
+<pre class="example">
+*** Project Template
+   :PROPERTIES:
+   :BILLABLE: (t/f) if the project is billable
+   :PERCENT: percent of billable time to use
+   :CATEGORY: the major project code to be used for billing purposes
+   :START_DATE: start date of project
+   :END_DATE: end date of project (when to remove from clocking percent
+   :GLOSSARY: The glossary of the key terms of the project for tagging notes and links
+   :ID:  the UUID of an object
+   :END:
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defvar org-project-project-template
+"* %^{Project Stage|ONGOING|IDEA|GLIMMER|CAPTURE|LIVE|KICKOFF|STARTUP|ACTIVE|CLOSEOUT|DONE|CANCELED} %?
+:CONTACTS:\n:END:
+:LOGBOOK:
+- State \"CREATED\"       from \"NONE\"       %U
+:END:
+:PROPERTIES:
+:BILLABLE: %^{Billable?|y|n}
+:PERCENT: %^{Percent of Time}
+:CATEGORY: %^{Project Category}
+:START_DATE:
+:END_DATE:
+:GLOSSARY:
+:ID: %(org-id-uuid)
+:TYPE: project
+:END:"
+"Project Template for org-project")
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq org-todo-keyword-faces
+      (append org-todo-keyword-faces
+              '(("ONGOING" :foreground org-todo-colors-status-current)
+                ("IDEA" :foreground org-todo-colors-status-future)
+                ("GLIMMER" :foreground org-todo-colors-status-future)
+                ("CAPTURE" :foreground org-todo-colors-status-upcoming :weight bold)
+                ("LIVE" :foreground org-todo-colors-status-upcoming :weight bold)
+                ("KICKOFF" :foreground org-todo-colors-status-urgent :weight bold)
+                ("STARTUP" :foreground org-todo-colors-status-current :weight bold)
+                ("ACTIVE" :foreground org-todo-colors-status-current :weight bold)
+                ("CLOSEOUT" :foreground org-todo-colors-status-urgent :weight bold)
+                ("DONE" :foreground org-todo-colors-status-completed)
+                ("CANCELED" :foreground org-todo-colors-status-completed))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Project States</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Projects follow a basic set of project stages so that I can keep track of the progression of a project in the future.
+</p>
+<ul class="org-ul">
+<li>Ongoing: These are projects that never end. Like fund-raising, administration, etc.
+</li>
+<li>Idea: This state is saved for ideas for projects that have not yet gelled into full projects, and have no identified funding opportunity.
+</li>
+<li>Glimmer: These are projects that have are more fleshed out, but only have a possible future funding line identified.
+</li>
+<li>Capture: These are projects that have an
+</li>
+<li>Live: When a RFP has dropped and we are exploring the project.
+</li>
+<li>Kickoff:
+</li>
+<li>Startup: The actual start up of the project once funding has been received.
+</li>
+<li>Active: The actual project management portion of the project.
+</li>
+<li>Closeout: The closeout of the project and sunsetting of technical componenets.
+</li>
+</ul>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(add-to-list 'org-todo-keywords
+             '(sequence "ONGOING" "IDEA(!)" "GLIMMER(!)" "CAPTURE(!)" "LIVE(!)" "KICKOFF(!)" "STARTUP(!)" "ACTIVE(!)" "CLOSEOUT(!)" "|" "DONE(d!)" "CANCELED(@!)"))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> <span class="todo TODO">TODO</span> Identifying active projects</h3>
+<div class="outline-text-3" id="text-2-4">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">  (defun org-projects-get-projects-all ()
+    (org-map-entries (nth 4 (org-heading-components)) t '(org-project-project-file)))
+
+;; A helm source for my projects
+;; http://kitchingroup.cheme.cmu.edu/blog/2015/01/24/Anatomy-of-a-helm-source/
+
+  (defun prompt-for-current-projects ()
+    (helm :sources '(org-projects-helm-source-current-projects)))
+
+  (defun org-projects-get-projects-current ()
+    (org-map-entries (nth 4 (org-heading-components)) "TODO=ACTIVE|TODO=STARTUP|TODO=CLOSEOUT|TODO=ONGOING" '(org-project-project-file)))
+
+  (setq org-projects-helm-source-current-projects
+        '((name . "Get current projects using helm.")
+          (candidates . org-projects-get-projects-current)
+          (action . (lambda (candidate)
+                      candidate))))
+
+
+  (defun prompt-for-current-projects-category ()
+    (helm :sources '(org-projects-helm-source-current-projects-category))))
+
+  (defun org-projects-get-project-category-current ()
+    (org-map-entries '(let ((category (org-entry-get (point) "CATEGORY"))
+                            (name (nth 4 (org-heading-components))))
+                        (cons name category)) "TODO=ACTIVE|TODO=STARTUP|TODO=CLOSEOUT|TODO=ONGOING" '(org-project-project-file)))
+
+  (setq org-projects-helm-source-current-projects-category
+        '((name . "Get current projects using helm.")
+          (candidates . org-projects-get-project-category-current)
+          (action . (lambda (candidate)
+                      candidate))))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> <span class="todo TODO">TODO</span> Project directories and projectile</h3>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Tasks</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Task File</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Tasks should be stored seperate from projects
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defvar org-project-tasks-file (true-filename "~/.org/tasks.org"))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Task helpers</h3>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><a id="the-UUID-of-an-object" name="the-UUID-of-an-object"></a><span class="section-number-3">3.3</span> Types of tasks</h3>
+<div class="outline-text-3" id="text-3-3">
+<pre class="example">
+*** TODO
+   SCHEDULED: &lt;2015-06-19 Fri&gt; DEADLINE: &lt;2015-06-19 Fri&gt;
+   :PROPERTIES:
+   :CATEGORY: the major project code to be used for billing purposes
+   :ID:  the UUID of an object
+   :WITH:
+   :AT:
+   :EFFORT:
+   :STATUS:
+   :TYPE:
+   :STAGE: The stage of the project to activate this task if it is to be delayed.
+   :END:
+*** ACTIVE
+   SCHEDULED: &lt;2015-06-19 Fri&gt; DEADLINE: &lt;2015-06-19 Fri&gt;
+   :PROPERTIES:
+   :CATEGORY: the major project code to be used for billing purposes
+   :ID:  the UUID of an object
+   :WITH:
+   :AT:
+   :EFFORT:
+   :STATUS:
+   :TYPE:
+   :END:
+*** CLOSED
+   SCHEDULED: &lt;2015-06-19 Fri&gt; DEADLINE: &lt;2015-06-19 Fri&gt;
+   :PROPERTIES:
+   :CATEGORY: the major project code to be used for billing purposes
+   :ID:  the UUID of an object
+   :WITH:
+   :AT:
+   :EFFORT:
+   :STATUS:
+   :TYPE:
+   :END:
+*** WAIT
+   :PROPERTIES:
+   :CATEGORY: the major project code to be used for billing purposes
+   :ID:  the UUID of an object
+   :WITH:
+   :AT:
+   :EFFORT:
+   :STATUS:
+   :TYPE:
+   :END:
+</pre>
+
+<p>
+Task capture  templates
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defvar org-project-task-template-todo
+"* TODO %?
+:LOGBOOK:
+- State \"CREATED\"       from \"NONE\"       %U
+:END:
+:PROPERTIES:
+:CATEGORY: %(prompt-for-current-projects-category)
+:EFFORT: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
+:ID: %(org-id-uuid)
+:ASSIGNED:
+:IMPORTANCE:
+:URGENCY:
+:WITH: %(org-projects-helm-contacts-source)
+:AT:
+:STATE: todo
+:TYPE: task
+:END:"
+"TODO Template for org-project")
+
+(defvar org-project-task-template-active
+"* ACTIVE %?
+:LOGBOOK:
+- State \"CREATED\"       from \"NONE\"       %U
+:END:
+:PROPERTIES:
+:CATEGORY: %(prompt-for-current-projects-category)
+:EFFORT: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
+:ID: %(org-id-uuid)
+:ASSIGNED:
+:IMPORTANCE:
+:URGENCY:
+:WITH: %(org-projects-helm-contacts-source)
+:AT:
+:STATUS: active
+:TYPE:
+:END:"
+"ACTIVE Template for org-project")
+
+(defvar org-project-task-template-contact
+"* CONTACT RE: %?
+:LOGBOOK:
+- State \"CREATED\"       from \"NONE\"       %U
+:END:
+:PROPERTIES:
+:CATEGORY: %(prompt-for-current-projects-category)
+:EFFORT: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
+:ID: %(org-id-uuid)
+:IMPORTANCE:
+:URGENCY:
+:WHO: %(org-project-helm-prompt-for-org-contact)
+:STATUS: active
+:TYPE: task
+:END:"
+"CONTACT Template for org-project")
+
+(defvar org-project-task-template-wait
+"* WAIT RE: %?
+:LOGBOOK:
+- State \"CREATED\"       from \"NONE\"       %U
+:END:
+:PROPERTIES:
+:CATEGORY: %(prompt-for-current-projects-category)
+:ID: %(org-id-uuid)
+:IMPORTANCE:
+:URGENCY:
+:FROM: %(org-project-helm-prompt-for-org-contact)
+:STATUS: active
+:TYPE: task
+:END:"
+"WAIT Template for org-project")
+
+(defvar org-project-task-template-closed
+"* %^{STATUS|DONE|SOMEDAY|CANCELED|FAILED} %?
+:PROPERTIES:
+:CATEGORY: %(prompt-for-current-projects-category)
+:EFFORT: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
+:ID: %(org-id-uuid)
+:ASSIGNED:
+:IMPORTANCE:
+:URGENCY:
+:AT:
+:STATUS: closed
+:TYPE: task
+:END:"
+"CLOSED Template for org-project")
+</pre>
+</div>
+<p>
+Task faces
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq org-todo-keyword-faces
+      (append org-todo-keyword-faces
+              '(("TODO" :foreground org-todo-colors-status-urgent)
+                ("ACTIVE" :foreground org-todo-colors-status-current)
+                ("CONTACT" :foreground org-todo-colors-status-current)
+                ("WAIT" :foreground org-todo-colors-status-upcoming :weight bold)
+                ("DONE" :foreground org-todo-colors-status-completed :weight bold)
+                ("SOMEDAY" :foreground org-todo-colors-status-completed :weight bold)
+                ("CANCELED" :foreground org-todo-colors-status-completed :weight bold)
+                ("FAILED" :foreground org-todo-colors-status-completed :weight bold))))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Task States</h3>
+<div class="outline-text-3" id="text-3-4">
+</div><div id="outline-container-sec-3-4-1" class="outline-4">
+<h4 id="sec-3-4-1"><span class="section-number-4">3.4.1</span> Basic Tasks</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+TODO keywords and workflow
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(add-to-list 'org-todo-keywords
+             '(sequence "TODO(t!)" "CONTACT(c!)" "ACTIVE(a!)" "WAIT(w/!)" "|" "DONE(d!)" "SOMEDAY(s!)" "CANCELED(C!)" "FAILED(f!)"))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-4-2" class="outline-4">
+<h4 id="sec-3-4-2"><span class="section-number-4">3.4.2</span> Updating a tasks status when states change</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+This is how I ensure that my status objects are updated
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq org-project-task-states
+      '(("active" . ("ACTIVE" "WAIT" "REPLY"))
+       ("todo" . ("TODO" "CONTACT"))
+       ("closed" . ("FAILED" "CANCELED" "SOMEDAY" "DONE"))))
+
+(defun org-project-task-update-status-on-todo-changes ()
+  "Update the state property for a task to represent complex states.
+   Hook function for 'org-after-todo-state-change-hook'
+   Check the org-project-task-states to see if the current state is one that"
+  (if (equal (org-entry-get (point) "TYPE") "task")
+  (let ((check-states org-project-task-states))
+    (while check-states
+      (let ((cur-state (car check-states)))
+        (if (member org-state (cdr cur-state))
+            (org-entry-put (point) "STATUS" (car cur-state))))
+        (setq check-states (cdr check-states))))))
+
+(add-hook 'org-after-todo-state-change-hook
+          'org-project-task-update-status-on-todo-changes)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Events</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Events File</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Task File
+Tasks should be stored seperate from projects
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defvar org-project-tasks-file (true-filename "~/.org/tasks.org"))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><a id="the-UUID-of-an-object" name="the-UUID-of-an-object"></a><span class="section-number-3">4.2</span> Event Properties</h3>
+<div class="outline-text-3" id="text-4-2">
+<pre class="example">
+*** EVENT
+   :PROPERTIES:
+   :CATEGORY: the major project code to be used for billing purposes
+   :ID:  the UUID of an object
+   :WITH:
+   :AT:
+   :EFFORT:
+   :STATUS:
+   :TYPE:
+   :END:
+*** MEET about TASK
+   :PROPERTIES:
+   :CATEGORY: the major project code to be used for billing purposes
+   :ID:  the UUID of an object
+   :WITH: [CONTACT(s)]
+   :AT:
+   :EFFORT:
+   :STATUS:
+   :TYPE:
+   :END:
+</pre>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defvar org-project-task-template-meet
+"* MEET about %?
+:PROPERTIES:
+:CATEGORY: %(prompt-for-current-projects-category)
+:EFFORT: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
+:ID: %(org-id-uuid)
+:ASSIGNED:
+:IMPORTANCE:
+:URGENCY:
+:WITH: %(org-project-helm-prompt-for-org-contact)
+:STATUS: active
+:TYPE: event
+:END:"
+"Task Template for org-project")
+
+(defvar org-project-task-template-event
+"* EVENT
+ SCHEDULED:  %^t
+:PROPERTIES:
+:CATEGORY: %(prompt-for-current-projects-category)
+:EFFORT: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
+:ID: %(org-id-uuid)
+:ASSIGNED:
+:IMPORTANCE:
+:URGENCY:
+:WITH: %(org-project-helm-prompt-for-org-contact)
+:STATUS: todo
+:TYPE: event
+:END:"
+"Task Template for org-project")
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq org-todo-keyword-faces
+      (append org-todo-keyword-faces
+              '(("EVENT" :foreground org-todo-colors-status-upcoming :weight bold)
+                ("MEET" :foreground org-todo-colors-status-current))))
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Email</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> <span class="todo TODO">TODO</span> Received new message</h3>
+<div class="outline-text-3" id="text-5-1">
+</div><div id="outline-container-sec-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1"><span class="section-number-4">5.1.1</span> If encrypted</h4>
+<div class="outline-text-4" id="text-5-1-1">
+</div><ol class="org-ol"><li><a id="sec-5-1-1-1" name="sec-5-1-1-1"></a>decrypt for parsing<br  /></li></ol>
+</div>
+<div id="outline-container-sec-5-1-2" class="outline-4">
+<h4 id="sec-5-1-2"><span class="section-number-4">5.1.2</span> get projects</h4>
+<div class="outline-text-4" id="text-5-1-2">
+</div><ol class="org-ol"><li><a id="sec-5-1-2-1" name="sec-5-1-2-1"></a>get project glossaries<br  /><ol class="org-ol"><li><a id="sec-5-1-2-1-1" name="sec-5-1-2-1-1"></a>check content and subject for terms<br  /></li>
+<li><a id="sec-5-1-2-1-2" name="sec-5-1-2-1-2"></a>tag to project if found<br  /></li></ol>
+</li>
+<li><a id="sec-5-1-2-2" name="sec-5-1-2-2"></a>check from, cc &amp; to for group memebers<br  /><ol class="org-ol"><li><a id="sec-5-1-2-2-1" name="sec-5-1-2-2-1"></a>tag to project if found<br  /></li></ol>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> <span class="todo TODO">TODO</span> Open a message</h3>
+<div class="outline-text-3" id="text-5-2">
+</div><div id="outline-container-sec-5-2-1" class="outline-4">
+<h4 id="sec-5-2-1"><span class="section-number-4">5.2.1</span> Create an org entry of the email</h4>
+</div>
+<div id="outline-container-sec-5-2-2" class="outline-4">
+<h4 id="sec-5-2-2"><span class="section-number-4">5.2.2</span> Add project category to entry from message tag</h4>
+</div>
+<div id="outline-container-sec-5-2-3" class="outline-4">
+<h4 id="sec-5-2-3"><span class="section-number-4">5.2.3</span> Start clocking to the message</h4>
+</div>
+<div id="outline-container-sec-5-2-4" class="outline-4">
+<h4 id="sec-5-2-4"><span class="section-number-4">5.2.4</span> Create global variable of message that was opened (so that when we stop clocking we don't have to query the original message that opened the thread)</h4>
+</div>
+<div id="outline-container-sec-5-2-5" class="outline-4">
+<h4 id="sec-5-2-5"><span class="section-number-4">5.2.5</span> decrypt message</h4>
+</div>
+</div>
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> <span class="todo TODO">TODO</span> Close a message</h3>
+<div class="outline-text-3" id="text-5-3">
+</div><div id="outline-container-sec-5-3-1" class="outline-4">
+<h4 id="sec-5-3-1"><span class="section-number-4">5.3.1</span> If clocking this message,</h4>
+<div class="outline-text-4" id="text-5-3-1">
+</div><ol class="org-ol"><li><a id="sec-5-3-1-1" name="sec-5-3-1-1"></a>Stop clocking and close the message.<br  /></li></ol>
+</div>
+<div id="outline-container-sec-5-3-2" class="outline-4">
+<h4 id="sec-5-3-2"><span class="section-number-4">5.3.2</span> If not clocking for some reason</h4>
+<div class="outline-text-4" id="text-5-3-2">
+</div><ol class="org-ol"><li><a id="sec-5-3-2-1" name="sec-5-3-2-1"></a>Close the message without closing current clock<br  /></li></ol>
+</div>
+</div>
+<div id="outline-container-sec-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> <span class="todo TODO">TODO</span> Reply to a message</h3>
+<div class="outline-text-3" id="text-5-4">
+</div><div id="outline-container-sec-5-4-1" class="outline-4">
+<h4 id="sec-5-4-1"><span class="section-number-4">5.4.1</span> Create an org-entry for the reply</h4>
+<div class="outline-text-4" id="text-5-4-1">
+</div><ol class="org-ol"><li><a id="sec-5-4-1-1" name="sec-5-4-1-1"></a>Add project category to entry from message tag<br  /></li>
+<li><a id="sec-5-4-1-2" name="sec-5-4-1-2"></a>Temporary ID created and stored in global value list<br  /></li></ol>
+</div>
+<div id="outline-container-sec-5-4-2" class="outline-4">
+<h4 id="sec-5-4-2"><span class="section-number-4">5.4.2</span> If adding contacts</h4>
+<div class="outline-text-4" id="text-5-4-2">
+</div><ol class="org-ol"><li><a id="sec-5-4-2-1" name="sec-5-4-2-1"></a>helm-contacts uses tags and members of the thread to give a sub-list of probable contacts<br  /></li></ol>
+</div>
+</div>
+<div id="outline-container-sec-5-5" class="outline-3">
+<h3 id="sec-5-5"><span class="section-number-3">5.5</span> <span class="todo TODO">TODO</span> Send Reply</h3>
+<div class="outline-text-3" id="text-5-5">
+</div><div id="outline-container-sec-5-5-1" class="outline-4">
+<h4 id="sec-5-5-1"><span class="section-number-4">5.5.1</span> Check to,cc,bcc contacts</h4>
+<div class="outline-text-4" id="text-5-5-1">
+</div><ol class="org-ol"><li><a id="sec-5-5-1-1" name="sec-5-5-1-1"></a>If contact in to,cc,or bcc requires encryption<br  /><ol class="org-ol"><li><a id="sec-5-5-1-1-1" name="sec-5-5-1-1-1"></a>Encrypt message<br  /></li></ol>
+</li></ol>
+</div>
+<div id="outline-container-sec-5-5-2" class="outline-4">
+<h4 id="sec-5-5-2"><span class="section-number-4">5.5.2</span> Get message ID from server and replace temporary ID with that ID</h4>
+</div>
+<div id="outline-container-sec-5-5-3" class="outline-4">
+<h4 id="sec-5-5-3"><span class="section-number-4">5.5.3</span> Stop clocking</h4>
+</div>
+</div>
+<div id="outline-container-sec-5-6" class="outline-3">
+<h3 id="sec-5-6"><span class="section-number-3">5.6</span> <span class="todo TODO">TODO</span> Close reply without sending</h3>
+<div class="outline-text-3" id="text-5-6">
+</div><div id="outline-container-sec-5-6-1" class="outline-4">
+<h4 id="sec-5-6-1"><span class="section-number-4">5.6.1</span> stop clocking</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Capture</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Adding/Capturing Objects</h3>
+<div class="outline-text-3" id="text-6-1">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq org-capture-templates
+      `(("p" "Projects")
+        ("pc" "Create Project" entry (file org-project-project-file)
+          ,org-project-project-template :clock-in t :clock-resume t)
+        ("t" "Tasks")
+        ("tt" "Create TODO" entry (file org-project-tasks-file)
+          ,org-project-task-template-todo :clock-in t :clock-resume t)
+        ("ta" "Create ACTIVE" entry (file org-project-tasks-file)
+          ,org-project-task-template-active :clock-in t :clock-resume t)
+        ("tc" "Create CONTACT" entry (file org-project-tasks-file)
+          ,org-project-task-template-contact :clock-in t :clock-resume t)
+        ("tw" "Create WAIT" entry (file org-project-tasks-file)
+          ,org-project-task-template-wait :clock-in t :clock-resume t)
+        ("tC" "Create Closed" entry (file org-project-tasks-file)
+          ,org-project-task-template-closed :clock-in t :clock-resume t)
+        ("e" "Events")
+        ("ee" "Create EVENT" entry (file org-project-events-file)
+          ,org-project-task-template-event :clock-in t :clock-resume t)
+        ("em" "Create MEETING" entry (file org-project-events-file)
+          ,org-project-task-template-meet :clock-in t :clock-resume t)))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Archiving Objects</h3>
+<div class="outline-text-3" id="text-6-2">
+</div><div id="outline-container-sec-6-2-1" class="outline-4">
+<h4 id="sec-6-2-1"><span class="section-number-4">6.2.1</span> Projects</h4>
+</div>
+<div id="outline-container-sec-6-2-2" class="outline-4">
+<h4 id="sec-6-2-2"><span class="section-number-4">6.2.2</span> Tasks</h4>
+</div>
+<div id="outline-container-sec-6-2-3" class="outline-4">
+<h4 id="sec-6-2-3"><span class="section-number-4">6.2.3</span> Events</h4>
+</div>
+</div>
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Workflow</h3>
+<div class="outline-text-3" id="text-6-3">
+</div><div id="outline-container-sec-6-3-1" class="outline-4">
+<h4 id="sec-6-3-1"><span class="section-number-4">6.3.1</span> <span class="todo TODO">TODO</span> prompt for TODO Item</h4>
+</div>
+<div id="outline-container-sec-6-3-2" class="outline-4">
+<h4 id="sec-6-3-2"><span class="section-number-4">6.3.2</span> <span class="todo TODO">TODO</span> Create entry</h4>
+</div>
+<div id="outline-container-sec-6-3-3" class="outline-4">
+<h4 id="sec-6-3-3"><span class="section-number-4">6.3.3</span> <span class="todo TODO">TODO</span> prompt for project</h4>
+<div class="outline-text-4" id="text-6-3-3">
+</div><ol class="org-ol"><li><a id="sec-6-3-3-1" name="sec-6-3-3-1"></a><span class="todo TODO">TODO</span> Add project category to entry<br  /></li></ol>
+</div>
+<div id="outline-container-sec-6-3-4" class="outline-4">
+<h4 id="sec-6-3-4"><span class="section-number-4">6.3.4</span> <span class="todo TODO">TODO</span> If capture requires a "with" entry</h4>
+<div class="outline-text-4" id="text-6-3-4">
+</div><ol class="org-ol"><li><a id="sec-6-3-4-1" name="sec-6-3-4-1"></a>create helm-contacts list to choose from<br  /></li></ol>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Contacts</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Helm Search for contacts</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+This searches the org-contacts file and returns the name of the contact.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defun org-projects-helm-get-contacts ()
+  (org-map-entries '(let ((email (org-entry-get (point) "EMAIL"))
+                          (name (nth 4 (org-heading-components))))
+                      (cons (concat name " ( " email " ) ") name)) t '(org-contacts-files)))
+
+  (setq org-projects-helm-contacts-source
+          `((name . "Helm capture for Org-Contacts")
+            (candidates . org-projects-helm-get-contacts)
+            (action . (lambda (candidate)
+                        (mapconcat 'identity (helm-marked-candidates) ", ")))))
+
+  (defun helm-prompt-for-current-org-contact ()
+        (interactive)
+        (helm :sources '(org-projects-helm-contacts-source)))
+</pre>
+</div>
+</div>
+<div id="outline-container-sec-7-1-1" class="outline-4">
+<h4 id="sec-7-1-1"><span class="section-number-4">7.1.1</span> <span class="todo TODO">TODO</span> How do I use helm in capture templates</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<p>
+This is just a quick function to remind me that I have to figure out how to use helm in capture templates.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defun org-project-task-template-contacts-test ()
+    (interactive)
+    (format "* TODO DELETE THIS TEST
+  SCHEDULED: %t
+  :PROPERTIES:
+  :CONTACTS: %s
+  :TYPE: test
+  :END:" (mapconcat 'identity (prompt-for-current-org-contact) ", ")))
+
+(defun org-projects-get-clean-contacts-list ()
+            (mapconcat 'identity (prompt-for-current-org-contact) ", "))
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> <span class="todo TODO">TODO</span> Contacts tagged with projects and teams that they are involved in</h3>
+</div>
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> <span class="todo TODO">TODO</span> contacts with "encrypt" category force encryption of messages sent to them</h3>
+</div>
+</div>

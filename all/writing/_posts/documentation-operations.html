@@ -1,0 +1,912 @@
+---
+title: DocOps: Automating Collaborative Documentation
+tags: documentation publishing
+layout: post
+date: 2015-06-24
+---
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> <span class="todo TODO">TODO</span> How does this help us?</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Modern day software aided projects often have a wealth of documentation for using the platform and trouble-shooting the problems withing. This exists in formal documentation for the project, and the formal documentation for all its software and hardware dependencies, in-line code documentation, list-serv's, IRC chats, google docs, wiki's, meeting notes, and a variety of other informal methods such as post-its and "just ask Georgia". Sadly most projects documentation is are profoundly decentralized and challenging for even an advanced user to locate, navigate, and identify as up-to-date and accurate. Newer users, who are best positioned to write "new user &amp; installation guides" are even worse off. They have to learn a myriad issue submission, or publication platforms before they can contribute documentation help or edits as well as identify the rarely documented social conventions required to get their submission acted upon. By this time they are no longer new users, and have lost much of the key experience that makes their input so valuable.
+</p>
+
+<p>
+Documentation needs to make it easy for users, partners, and future collaborators to consume, update, customize, localize, and translate. More so, truly good documentation does all this automatically and consistently over time leading to an iterative stewardship process instead of a sporadic process of massive re-reading and re-writes.
+</p>
+
+<ul class="org-ul">
+<li><a href="http://www.australiancurriculum.edu.au/static/docs/Benefits%20of%20a%20Machine%20Readable%20Curricula.pdf">http://www.australiancurriculum.edu.au/static/docs/Benefits%20of%20a%20Machine%20Readable%20Curricula.pdf</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> <span class="todo TODO">TODO</span> Sample Workflow</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+This sample workflow attempts to show how a documentation operations workflow can be used to create complex multi-source publications in a robust reproducible manner.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Content Creation</h3>
+<div class="outline-text-3" id="text-2-1">
+</div><div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> standardization</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Determine standards for document creation so that it can be consumed and cleaned automatically
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2"><span class="section-number-4">2.1.2</span> creation</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+initial creation of sources
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-1-3" class="outline-4">
+<h4 id="sec-2-1-3"><span class="section-number-4">2.1.3</span> meta-data addition</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<p>
+Using various automated and human process' to add meta-data to internally created sources.
+</p>
+</div>
+<ol class="org-ol"><li><a id="sec-2-1-3-1" name="sec-2-1-3-1"></a>attribution<br  /><div class="outline-text-5" id="text-2-1-3-1">
+<p>
+Proper attribution and licensing of sources needs to be added to sources in an accessible way so that they can be used externally.
+</p>
+</div>
+</li>
+<li><a id="sec-2-1-3-2" name="sec-2-1-3-2"></a>access controls<br  /><div class="outline-text-5" id="text-2-1-3-2">
+<p>
+Documentation needs to be tagged for levels of release if there is content that is not to be distributed to certain parties.
+</p>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-2-1-4" class="outline-4">
+<h4 id="sec-2-1-4"><span class="section-number-4">2.1.4</span> verification</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<ul class="org-ul">
+<li>Internally created sources need to be verified as good, and accurate through editing, peer review, etc.
+</li>
+<li>Sources need to be verified as having proper access controls for release.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Document specification</h3>
+<div class="outline-text-3" id="text-2-2">
+</div><div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> Mapping</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+The sources that the document will be created from need to be identified,
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-2" class="outline-4">
+<h4 id="sec-2-2-2"><span class="section-number-4">2.2.2</span> Transformation specification</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+The method for transforming sources into a consistent format needs to be specified
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-3" class="outline-4">
+<h4 id="sec-2-2-3"><span class="section-number-4">2.2.3</span> Pattern specification</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+Publication/Design patterns need to be created and assigned to specific publication objects. (e.g. object-&gt;latex transformations)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-4" class="outline-4">
+<h4 id="sec-2-2-4"><span class="section-number-4">2.2.4</span> Workflow Creation</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+Workflow events, alerts, roles, and checks need to be determined and put into the automation pipeline to streamline human intervention.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Collection</h3>
+<div class="outline-text-3" id="text-2-3">
+</div><div id="outline-container-sec-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1"><span class="section-number-4">2.3.1</span> extraction</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+External and internal sources need to be extracted and placed into a central location
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-2" class="outline-4">
+<h4 id="sec-2-3-2"><span class="section-number-4">2.3.2</span> archiving</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+All sources should be archived in their raw format so that historical documents can be verified both internally and independently. This also allows for continued use of external content that becomes unavailable.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-3" class="outline-4">
+<h4 id="sec-2-3-3"><span class="section-number-4">2.3.3</span> cleaning</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<p>
+Non-standardized content needs to be cleaned for use.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-4" class="outline-4">
+<h4 id="sec-2-3-4"><span class="section-number-4">2.3.4</span> Attribution and access control</h4>
+<div class="outline-text-4" id="text-2-3-4">
+<p>
+Content should be tagged with proper attribution and access control flags
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3-5" class="outline-4">
+<h4 id="sec-2-3-5"><span class="section-number-4">2.3.5</span> verifying</h4>
+<div class="outline-text-4" id="text-2-3-5">
+<p>
+Sources should be checked through automated means to ensure that they contained the requested content. This is where archived sources could be automatically pulled in for non-temporal content and where alerts would need to be created and human intervention possibly required to address missing or malformed content.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> Aggregation</h3>
+<div class="outline-text-3" id="text-2-4">
+</div><div id="outline-container-sec-2-4-1" class="outline-4">
+<h4 id="sec-2-4-1"><span class="section-number-4">2.4.1</span> transformation</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<p>
+Sources will have their content transformed to a standardized medium and structure.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-4-2" class="outline-4">
+<h4 id="sec-2-4-2"><span class="section-number-4">2.4.2</span> mapping</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<p>
+All source objects will be linked to a global document map.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-4-3" class="outline-4">
+<h4 id="sec-2-4-3"><span class="section-number-4">2.4.3</span> verifying</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<p>
+At this point the map can be checked through an automated means to ensure that it has all the sources that it needs to output any document required of it.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-4-4" class="outline-4">
+<h4 id="sec-2-4-4"><span class="section-number-4">2.4.4</span> merging</h4>
+<div class="outline-text-4" id="text-2-4-4">
+<p>
+A single standardized source will be created from the global map of content.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-4-5" class="outline-4">
+<h4 id="sec-2-4-5"><span class="section-number-4">2.4.5</span> attribution and access control</h4>
+<div class="outline-text-4" id="text-2-4-5">
+<p>
+Multi-Source attribution and access control flags will be applied to all objects that are created to ensure that publication pipelines do not misuse or mis-attribute content.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-4-6" class="outline-4">
+<h4 id="sec-2-4-6"><span class="section-number-4">2.4.6</span> archiving</h4>
+<div class="outline-text-4" id="text-2-4-6">
+<p>
+The core map should be archived at this point. This will allow for quick iteration on publication maps and transformation and the easy creation of one-off documents without re-aggregating content.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Publication</h3>
+<div class="outline-text-3" id="text-2-5">
+</div><div id="outline-container-sec-2-5-1" class="outline-4">
+<h4 id="sec-2-5-1"><span class="section-number-4">2.5.1</span> access control</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<p>
+If ANY sensitive or internal documents are created using the same publication system as external documents publication should have clear allowable content and access level controls.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-5-2" class="outline-4">
+<h4 id="sec-2-5-2"><span class="section-number-4">2.5.2</span> mapping</h4>
+<div class="outline-text-4" id="text-2-5-2">
+<p>
+Publication end-points will need to have maps that describe the output document/file/repository structure in relationship to the single-source map created during aggregation and the patterns specified in the document specification section.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-5-3" class="outline-4">
+<h4 id="sec-2-5-3"><span class="section-number-4">2.5.3</span> transforming</h4>
+<div class="outline-text-4" id="text-2-5-3">
+<p>
+Sources will be aggregated into a single object as defined by the publication map and then transformed using the patterns defined in the publication map.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-5-4" class="outline-4">
+<h4 id="sec-2-5-4"><span class="section-number-4">2.5.4</span> verification</h4>
+<div class="outline-text-4" id="text-2-5-4">
+<p>
+The final output should be verified using automated testing as well as through human review.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-5-5" class="outline-4">
+<h4 id="sec-2-5-5"><span class="section-number-4">2.5.5</span> archiving</h4>
+<div class="outline-text-4" id="text-2-5-5">
+<p>
+The final published outputs should be archived for externally facing archival and support purposes.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> <span class="todo TODO">TODO</span> Humans: Supporting the Social Side of the Publication Pipeline</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+You automate the documentation creation workflow, you can't entirely automate the documentation
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Publication Pipelines</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><a href="http://sempublishing.sourceforge.net/">http://sempublishing.sourceforge.net/</a>
+</li>
+<li>Workflow / process
+<ul class="org-ul">
+<li><a href="http://www.essepuntato.it/lode/http://purl.org/spar/pwo">http://www.essepuntato.it/lode/http://purl.org/spar/pwo</a>
+</li>
+</ul>
+</li>
+<li>People
+<ul class="org-ul">
+<li><a href="http://www.essepuntato.it/lode/http://purl.org/spar/pro">http://www.essepuntato.it/lode/http://purl.org/spar/pro</a>
+</li>
+</ul>
+</li>
+<li>Document management
+<ul class="org-ul">
+<li><a href="http://www.essepuntato.it/lode/http://purl.org/spar/pso">http://www.essepuntato.it/lode/http://purl.org/spar/pso</a>
+</li>
+</ul>
+</li>
+<li>Document Creation
+<ul class="org-ul">
+<li><a href="http://lov.okfn.org/dataset/lov/vocabs/pdo">Project Documents Ontology</a>
+</li>
+</ul>
+</li>
+<li>Review <a href="http://bibliocloud.com/">http://bibliocloud.com/</a>
+</li>
+</ul>
+<p>
+<i>images/blog/automated_documentation/pipeline.svg</i>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Documentation Choreography</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Service Choreography
+</li>
+<li><a href="http://www.w3.org/TR/ws-cdl-10/">http://www.w3.org/TR/ws-cdl-10/</a>
+<ul class="org-ul">
+<li>Goals
+<ul class="org-ul">
+<li>More specifically, the goals of the WS-CDL specification are to permit:
+</li>
+
+<li>Reusability. The same choreography definition is usable by different participants operating in different contexts (industry, locale, etc.) with different software (e.g. application software)
+</li>
+
+<li>Cooperation. Choreographies define the sequence of exchanging messages between two (or more) independent participants or processes by describing how they should cooperate
+</li>
+
+<li>Multi-Party Collaboration. Choreographies can be defined involving any number of participants or processes
+</li>
+
+<li>Semantics. Choreographies can include human-readable documentation and semantics for all the components in the choreography
+</li>
+
+<li>Composability. Existing choreographies can be combined to form new choreographies that may be reused in different contexts
+</li>
+
+<li>Modularity. Choreographies can be defined using an "inclusion" facility that allows a choreography to be created from parts contained in several different choreographies
+</li>
+
+<li>Information Driven Collaboration. Choreographies describe how participants make progress within a collaboration, through the recording of exchanged information and changes to observable information that cause ordering constraints to be fulfilled and progress to be made
+</li>
+
+<li>Information Alignment. Choreographies allow the participants that take part in choreographies to communicate and synchronize their observable information
+</li>
+
+<li>Exception Handling. Choreographies can define how exceptional or unusual conditions that occur while the choreography is performed are handled
+</li>
+
+<li>Transactionality. The processes or participants that take part in a choreography can work in a "transactional" way with the ability to coordinate the outcome of the long-lived collaborations, which include multiple participants, each with their own, non-observable business rules and goals
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Automation</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>Mining Communication Channels for Needed Documentation and FAQ's
+<ul class="org-ul">
+<li>issue cue's
+</li>
+<li>listserv questions
+<ul class="org-ul">
+<li>Commonly users are guided to links to similar questions on a project listserv. This requires expert communicators with historical memory to be available when the question is asked.
+</li>
+<li>Capturing, tagging, etc. the content from list-serv questions into a more easily searchable and filterable "FAQ" will allow even newer members of the community to guide new users to a more generalized answer to their problem.
+</li>
+</ul>
+</li>
+<li>IRC bots
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Human Readable Events: Logging to support process instead of debugging</h3>
+<div class="outline-text-3" id="text-3-4">
+</div><div id="outline-container-sec-3-4-1" class="outline-4">
+<h4 id="sec-3-4-1"><span class="section-number-4">3.4.1</span> Process focused logging of of events in the publication pipline should refer to the publication scale objects, and not the tools that run them.</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>Missing meta-data should speak to the "source" of that data instead of the error in the tool. <i>NOTE: the all structure and content types for these examples are made up and do not accurately reflect the guidance throughout the rest of this piece.</i>
+
+<ul class="org-ul">
+<li>e.g. "The <i>new</i> <span class="underline">how to start</span> section in the <span class="underline">beginner setup source</span> is missing an <span class="underline">access control designation</span>. This content was last authored by <span class="underline">Jane Smith</span>. The default <span class="underline">access control</span> designation of "private" will be assigned to this object. Please either&#x2026; Provide <span class="underline">Approval</span> or add an <span class="underline">access control designation</span> to this source and then <span class="underline">reload this source</span>. Publication is stalled until one of these actions is taken."
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+This alert is targeted at a publication source. It clearly tells the person in the assigned role what new content has been added, enough context for the user to understand what is going on, who they might want to contact to solve the issue, where the content is located contained, what issue needs to be resolved, and how to go about resolving it. Underlined text above should be links to the places where the person can take action, or to definitions of special terms (like <span class="underline">access control designation</span>.)
+</p>
+
+<p>
+This alert shows how alerts that are publication pipeline facing should be alerts that give the information that a <b>user</b> of the process can use to update or address content errors. These should be seperate than technological.
+</p>
+
+<ul class="org-ul">
+<li>e.g. "The publication process  from <span class="underline">January 5th, 2015</span> is <i>paused</i> at the <span class="underline">collection stage</span>. There are <span class="underline">5 assigned</span> and <span class="underline">1 unassigned</span> tasks that need to be completed before it can continue."
+</li>
+</ul>
+
+<p>
+This more public alert
+</p>
+
+<ul class="org-ul">
+<li>e.g. "The <span class="underline">how to start</span> section in the <span class="underline">beginner setup</span> source has changed since the <span class="underline">last completed publication</span>."
+</li>
+</ul>
+
+<p>
+in the documentation should be  accurately reflect revision changes based upon the larger documentation elements instead of by file/line of text. "The description of project X has changed instead of /projects/X/description was changed."
+</p>
+<ul class="org-ul">
+<li>This also allows for central logging of changes that occur at various end-points that do not have long-term revision control.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-4-2" class="outline-4">
+<h4 id="sec-3-4-2"><span class="section-number-4">3.4.2</span> The software in the publication pipeline should run at human speed.</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ul class="org-ul">
+<li>When decisions need to be made
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> <span class="todo TODO">TODO</span> Creation: The components of collaborative documentation</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Make Finding Editable Content Easy</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Seperate the publishing code / content from the text
+<ul class="org-ul">
+<li><a href="https://the-engine-room.github.io/rdf-primer/">Awesome publications</a> with content stuck in a <a href="https://github.com/the-engine-room/rdf-primer">publication program specific repository structure</a> makes it difficult for users who are unfamiliar with the publishing platform to contribute content.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Make content easy to edit for those outside the core publishing pipeline</h3>
+<div class="outline-text-3" id="text-4-2">
+</div><div id="outline-container-sec-4-2-1" class="outline-4">
+<h4 id="sec-4-2-1"><span class="section-number-4">4.2.1</span> Contributors should have an interface that makes contribution easy</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>The rise of Github &amp; The failed promise of git
+<ul class="org-ul">
+<li>DONE <a href="http://www.codersgrid.com/2014/04/07/gitbook-build-your-programming-book-with-interactive-exercises/">GitBook, Build Your Programming Book With Interactive Exercises</a>
+</li>
+<li>Review <a href="http://railsware.com/blog/2014/04/16/creating-books-with-gitbook/">Creating books with GitBook | Railsware Blog</a>
+</li>
+<li>Review <a href="https://felixfan.github.io/rstudy/2014/04/22/gitbook/">Statistics and Programming!</a>
+</li>
+<li>Review <a href="http://cms.chun.pro/post/agZjaHVjbXNyEgsSBFBvc3QiCG0ZYCcmHCE5DA/gitbook">Gitbook - Chu's CMS</a>
+</li>
+<li>REVIEW <a href="https://draftin.com/">https://draftin.com/</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4-2-2" class="outline-4">
+<h4 id="sec-4-2-2"><span class="section-number-4">4.2.2</span> A project needs documentation standards</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li><a href="http://sempublishing.sourceforge.net/">http://sempublishing.sourceforge.net/</a>
+</li>
+<li>Those standards need to be clearly documented
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-3" class="outline-4">
+<h4 id="sec-4-2-3"><span class="section-number-4">4.2.3</span> Documentation standards need to be automatically enforce</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li>Automating the creation of documentation issue creation on new releases / API changes / etc.
+<ul class="org-ul">
+<li>Issues that have project staff check the corresponding documentation sections for where changes occur
+</li>
+<li>git-hooks
+<ul class="org-ul">
+<li>why use git hooks?
+<ul class="org-ul">
+<li>automating meta-data allows for all manner of wonders
+<ul class="org-ul">
+<li>Meta-Data is really important for any of this to work
+</li>
+</ul>
+</li>
+<li>automating alerts to previous authors of documentation
+</li>
+<li>automating README table-of-contents, etc.
+</li>
+<li>automating backup / caching of links (see link caching to avoid dead links to external references)
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>github web-hooks
+<ul class="org-ul">
+<li><a href="https://developer.github.com/">https://developer.github.com/</a>
+</li>
+<li><a href="https://developer.github.com/changes/2015-04-21-organization-hooks-api-finalized/">https://developer.github.com/changes/2015-04-21-organization-hooks-api-finalized/</a>
+</li>
+</ul>
+</li>
+<li>automating indexing
+<ul class="org-ul">
+<li>semantically enforced tag creation
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-4" class="outline-4">
+<h4 id="sec-4-2-4"><span class="section-number-4">4.2.4</span> Monitoring tool/project end-points for documentation needs</h4>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Aggregation and Re-Use</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>Use Consistent Long-term URI's
+<ul class="org-ul">
+<li>for metadata
+<ul class="org-ul">
+<li>Using a long-term URI for source meta-data allows the URI of content to be modified without requiring all documentation being published from those sources to be updates.
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li>Make content available and repurposeable
+<ul class="org-ul">
+<li><a href="http://www.fabriders.net/rrcmdraft-2/">resource creator manifesto</a>
+</li>
+<li><a href="http://www.w3.org/TR/2014/NOTE-ld-bp-20140109/">Best Practices for Publishing Linked Data</a>
+</li>
+</ul>
+</li>
+<li>Code Documentation and API's
+<ul class="org-ul">
+<li>literate programming
+</li>
+<li>doxygen, etc.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Automation</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>leveraging your version control system
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> <span class="todo TODO">TODO</span> Collection: The components of automated documentation</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>metadata is vital
+</li>
+<li>standardization is key
+</li>
+<li>source consumption
+<ul class="org-ul">
+<li>Multi-Source Publication
+<ul class="org-ul">
+<li>content
+<ul class="org-ul">
+<li>sub-project content consumption
+<ul class="org-ul">
+<li>Meta-Data
+<ul class="org-ul">
+<li>project descriptions, authors, staff, copyright, etc.
+</li>
+</ul>
+</li>
+<li>documentation
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Existing Ontologies for Specifying and Reusing Content</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li><a href="https://www.openarchives.org/ore/">Open Archives Initiative Object Reuse and Exchange</a>
+</li>
+<li><a href="http://guava.iis.sinica.edu.tw/r4r">Relations for Reusing (R4R) Ontology</a>
+</li>
+<li>Responsible usage
+<ul class="org-ul">
+<li><a href="http://lov.okfn.org/dataset/lov/vocabs/opmo">The Open Provenance Model</a> is a model of provenance that is designed to meet the following requirements: (1) To allow provenance information to be exchanged between systems, by means of a compatibility layer based on a shared provenance model. (2) To allow developers to build and share tools that operate on such a provenance model. (3) To define provenance in a precise, technology-agnostic manner. (4) To support a digital representation of provenance for any 'thing', whether produced by computer systems or not. (5) To allow multiple levels of description to coexist. (6) To define a core set of rules that identify the valid inferences that can be made on provenance representation.
+</li>
+<li><a href="http://lov.okfn.org/dataset/lov/vocabs/opmv">OPMV, the Open Provenance Model Vocabulary, provides terms to enable practitioners of data publishing to publish their data responsibly.</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> logic based source identification</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Meta-data URI's allow for
+</p>
+
+<p>
+<b>Example:</b> The below example shows one use case where the use of a long-term URI allows the documentation to identify the guide that describes the most up-to-date version of the software.
+</p>
+
+<p>
+<i>NOTE: this is entirely pseudo-code and is not a recommendation and does not reflect the guidance or API's described throughout the rest of this piece.</i>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-python"># We are lookign for the guide for the latest version of the software
+latest_guide_version = 0.0
+latest_guide = None
+
+# We get the projects metadata object
+metadata_source = get_source("https://targeted_project/installation_guide.metadata")
+
+# We retreive all the software documentation object metadatay
+all_guides = metadata_source.get_all("guides")
+
+for guide in all_guides:
+    software_version = datetime(guide.version)
+    if software_version &gt; latest_guide_version:
+        latest_guide = guide.URI
+        latest_guide_version = software_version
+
+return latest_guide
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Scraping project data for documentation</h3>
+<div class="outline-text-3" id="text-5-3">
+</div><div id="outline-container-sec-5-3-1" class="outline-4">
+<h4 id="sec-5-3-1"><span class="section-number-4">5.3.1</span> Code Documentation</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<ul class="org-ul">
+<li>doxygen, etc
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-5-3-2" class="outline-4">
+<h4 id="sec-5-3-2"><span class="section-number-4">5.3.2</span> Build and Testing Documentation</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<ul class="org-ul">
+<li>Infrastructure for providing key-data for users
+<ul class="org-ul">
+<li>Tracking the current software state
+<ul class="org-ul">
+<li><a href="https://travis-ci.org/">https://travis-ci.org/</a>
+</li>
+</ul>
+</li>
+<li>Tracking where users can get software
+</li>
+
+<li>Tracking testing &amp; needs
+<ul class="org-ul">
+<li><a href="https://coveralls.io/">https://coveralls.io/</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> Test driven documentation</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>Link checking
+<ul class="org-ul">
+<li><a href="https://github.com/gajus/deadlink">https://github.com/gajus/deadlink</a>
+</li>
+</ul>
+</li>
+<li>Link Caching to avoid dead references
+<ul class="org-ul">
+<li>Wayback Machines API
+<ul class="org-ul">
+<li><a href="https://github.com/elationfoundation/waybackcheck">https://github.com/elationfoundation/waybackcheck</a>
+</li>
+</ul>
+</li>
+<li>On-Site Caching
+<ul class="org-ul">
+<li>Memento
+<ul class="org-ul">
+<li><a href="http://mementoweb.org/depot/native/ia/">http://mementoweb.org/depot/native/ia/</a>
+</li>
+</ul>
+</li>
+<li>Amber
+<ul class="org-ul">
+<li><a href="http://amberlink.org/">http://amberlink.org/</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> <span class="todo TODO">TODO</span> Aggregation</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>object requirements meta-data
+<ul class="org-ul">
+<li>Using standardized defininitions of types of documentation to allow tracking of complete and incomplete elements in documentation allows you to automate its inclusion based upon its completeness.
+</li>
+<li>This also allows for automation of styling based upon <b>where</b> a markdown object is located, what it is called, and its meta-data instead of having in-line styling.
+</li>
+<li>these requirements allow for logging of changes in the documentation that accurately reflect revision changes based upon the larger documentation elements instead of by file/line of text. "The description of project X has changed instead of /projects/X/description was changed."
+<ul class="org-ul">
+<li>This also allows for central logging of changes that occur at various end-points that do not have long-term revision control.
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> <span class="todo TODO">TODO</span> Publication</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Multi-Destination Publication</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>Creating multiple end-points
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Single_source_publishing">Single source publishing</a>
+</li>
+<li>Building published content based on style sheets
+</li>
+</ul>
+</li>
+
+<li>Multiple formats
+<ul class="org-ul">
+<li>Produce polished content in multiple formats for different types of consumption
+<ul class="org-ul">
+<li>plain text
+</li>
+<li>pdf
+</li>
+<li>odt/doc
+</li>
+<li>http
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Access Controls</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>Access controls, security, and distribution of documentation
+<ul class="org-ul">
+<li>If ANY sensitive or internal documents are created using the same publication system as external documents publication should have clear allowable content and access level controls.
+</li>
+<li>This allows externally facing documents to be created using the same templates as internally facing documents with different access controls specified.
+</li>
+<li>This reduces document duplication and helps to ensure that ALL documentation is updated when a change is made to the documentation back-end.
+</li>
+<li>meta-data based publication controls
+</li>
+<li>building security and authentication into the endpoint collection process
+</li>
+<li>Content creation based upon the level of access of the audience it is to be shared with.
+<ul class="org-ul">
+<li>rapid sanitized documentation creation for a less or more privileged audience can be automated through secured end-points that contain more sensitive information and flags at documentation creation time that determine what index items will be added.
+</li>
+</ul>
+</li>
+<li>Caution/warnings can be added to documents about sharing when sensitivity of atomized documentation increases and therefore the final document should not be shared.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> Styling</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>Markup/down pre-processors
+<ul class="org-ul">
+<li><a href="https://pythonhosted.org/Markdown/extensions/api.html">https://pythonhosted.org/Markdown/extensions/api.html</a>
+</li>
+<li><a href="https://github.com/jreese/markdown-pp">https://github.com/jreese/markdown-pp</a>
+</li>
+<li><a href="https://github.com/gajus/gitdown#features-find-dead-urls-and-fragment-identifiers">https://github.com/gajus/gitdown#features-find-dead-urls-and-fragment-identifiers</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> Graphics</h3>
+<div class="outline-text-3" id="text-7-4">
+<ul class="org-ul">
+<li>automated graphic construction
+<ul class="org-ul">
+<li>graphing out workflows, content structure, and other information using graphviz markdown to show object relationships in meta-data and object's to include in graphics in index files.
+</li>
+<li><a href="http://www.graphviz.org/">http://www.graphviz.org/</a>
+</li>
+<li>doxygen - code
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-5" class="outline-3">
+<h3 id="sec-7-5"><span class="section-number-3">7.5</span> Archiving and history preservation</h3>
+<div class="outline-text-3" id="text-7-5">
+<ul class="org-ul">
+<li>automating polished content responsibly
+<ul class="org-ul">
+<li>Marking versions
+</li>
+<li>documenting changes (version control)
+<ul class="org-ul">
+<li>See: Human readable logging
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>

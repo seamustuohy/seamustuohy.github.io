@@ -1,0 +1,47 @@
+---
+title: Nmap cardiology
+tags: lua nmap script
+layout: post
+date: 2014-04-09
+---
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Using nmap scripting to test the heartbleed bug</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+NOTE: This post requires a very basic understanding of Lua, or the willingness to not cate about syntax and just follow along for the principles.
+</p>
+
+<p>
+A few days ago the <a href="http://heartbleed.com/">Heartbleed bug</a> came out which allowed attackers to read the memory of systems using a vulnerable version of OpenSSL. <i>Reading the memory</i> will allow attackers to steal even the encryption keys which make <i>all</i> secure traffic <i>ever</i> monitored to and from one of these systems decryptable. But, that happened a whole two days ago (as of when I put fingers to keyboard on this piece). If you are reading this blog, you probobly know that. So, what I decided to do this morning is to build a script to identify, and notify, vulnerable systems.
+</p>
+
+<p>
+To start I need to gather my tools. Nmap has a robust <a href="http://nmap.org/nsedoc/">script library</a> already, and I don't want to write what I don't have to. Heartbleed was orginally released on April 7th 2014. It is 7:50am on April 9th and there is already a Heartbleed vulnerability scripted up and uploaded to the script library&#x2026; I am as dissapointed as you are. But, since this was supposed to simply be a nmap scripting lesson, and open source is rooted in reuse, we are not going to re-implement this from scratch. Instead, we are going to use this script to make a vulnerability notifier.
+</p>
+
+<p>
+The first thing we need to do is set up our script. This simply means that I write a description, author information, licsence, and assign this script to a set of categories. You can find details about this in the <a href="http://nmap.org/book/nse-script-format.html">script formatting documentation.</a>
+</p>
+
+<pre class="example">
+description = [[ Identifies servers who are vulnerable to heartbleed and then notifies the current owner of the ip address with an e-mail. ]]
+
+author = "Seamus Tuohy "
+license = "Same as Nmap--See http://nmap.org/book/man-legal.html"
+categories = { "vuln", "safe", "discovery"}
+</pre>
+
+<p>
+I took the categories directly from the heartbleed script and added a <i>discovery</i> category because the <a href="http://nmap.org/book/nse-usage.html#nse-categories">documentation</a> uses that section to note scripts that are "querying public registies." I am going to need to query public registries to find the contact info of server owners, so I also fit into this category.
+</p>
+
+<p>
+Since we already have the heartbleed script, and we simply want to add e-mail the owner of an ip-address I am going to use an existing <a href="http://nmap.org/nsedoc/scripts/whois-ip.html%22">whois this ip</a> script to gather the e-mails from the ip addresses we scan. With these two scripts already in place we simply have to build the glue to place them together.
+</p>
+
+<p>
+For those who are dissapointed that this is starting to sound more and more like an excecise in becoming a /script kiddie,/ I am sorry. But, that is what you get for having a robust community of developers working together. All the interesting problems are solved.
+</p>
+</div>
+</div>
