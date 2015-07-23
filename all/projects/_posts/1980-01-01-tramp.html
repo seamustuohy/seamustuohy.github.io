@@ -1,0 +1,62 @@
+---
+title: TRAMP Travelers Ready-Made Appliance for Maintaining Privacy
+tags: gpg bash
+layout: post
+date: 2015-07-23
+---
+
+<p>
+I have been thinking a lot about how to simplify my travel digital security practices. I just found the README for a tool that I started scraping together a year ago and put aside to focus on other things. The start of the GPG scripts can be found on <a href="https://github.com/elationfoundation/travel-gpg-test">github</a> for the interested. This post is only to provide ideas for others who might be thinking about simplifying their travel security kits.
+</p>
+
+<p>
+## TRAMP: Travelers Ready-Made Appliance for Maintaining Privacy
+</p>
+
+<p>
+TRAMP is a set of tools for rapidly creating temporary digital travel support.
+</p>
+
+<p>
+This toolkit was built to respond to my need for constant digital communication with the requirement that when I travel I do not put my digital personal or work infrastructure in extra danger.
+</p>
+
+<p>
+### The TRAMP kit consists of four parts:
+</p>
+
+<ul class="org-ul">
+<li>Mail-In-A-Box
+</li>
+</ul>
+
+<p>
+A custom fork of Mail-In-A-Box that is installed on a VPS while I am traveling. This server houses all of my travel infrastructure including a server for my temporary travel e-mail address, webmail client, rss server, forwarding sent mail to the main e-mail address, and creating user config files for my devices. It is a throw-away server that is closed upon my return.
+</p>
+
+<ul class="org-ul">
+<li>TRAMP-Pi
+</li>
+</ul>
+
+<p>
+A set of scripts that set up a Raspberry-PI to act as a IMAP client that downloads e-mail, sends custom auto-responses to senders, and forwards the subject line and sender to the travel e-mail address.
+</p>
+
+<ul class="org-ul">
+<li>TRAMP-Setup
+</li>
+</ul>
+
+<p>
+A command line wizard that creates the files needed for the travel-kit. It gathers data that should travel with me including specified e-mail contacts, public keys, and calendars. It creates a custom travel GPG key, auto-responder e-mail, and sign's that e-mail with my current GPG key to authenticate it before transfer to the TRAMP-pi.
+</p>
+
+<ul class="org-ul">
+<li>TRAMP-Kit
+</li>
+</ul>
+
+<p>
+The custom debian image setup used to populate a travel netbook that I can bring with me as my primary computer when traveling.
+</p>
