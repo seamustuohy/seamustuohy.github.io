@@ -9,10 +9,9 @@ date: 2015-07-23
 I have been thinking a lot about how to simplify my travel digital security practices. I just found the README for a tool that I started scraping together a year ago and put aside to focus on other things. The start of the GPG scripts can be found on <a href="https://gist.github.com/elationfoundation/eed533a2f8ecc648c0d1">github</a> for the interested. This post is only to provide ideas for others who might be thinking about simplifying their travel security kits.
 </p>
 
-<p>
-## TRAMP: Travelers Ready-Made Appliance for Maintaining Privacy
-</p>
-
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">TRAMP: Travelers Ready-Made Appliance for Maintaining Privacy</h2>
+<div class="outline-text-2" id="text-1">
 <p>
 TRAMP is a set of tools for rapidly creating temporary digital travel support.
 </p>
@@ -20,43 +19,45 @@ TRAMP is a set of tools for rapidly creating temporary digital travel support.
 <p>
 This toolkit was built to respond to my need for constant digital communication with the requirement that when I travel I do not put my digital personal or work infrastructure in extra danger.
 </p>
+</div>
+</div>
 
-<p>
-### The TRAMP kit consists of four parts:
-</p>
-
-<ul class="org-ul">
-<li>Mail-In-A-Box
-</li>
-</ul>
-
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">The TRAMP kit consists of four parts:</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">Mail-In-A-Box</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
 A custom fork of Mail-In-A-Box that is installed on a VPS while I am traveling. This server houses all of my travel infrastructure including a server for my temporary travel e-mail address, webmail client, rss server, forwarding sent mail to the main e-mail address, and creating user config files for my devices. It is a throw-away server that is closed upon my return.
 </p>
+</div>
+</div>
 
-<ul class="org-ul">
-<li>TRAMP-Pi
-</li>
-</ul>
-
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">TRAMP-Pi</h3>
+<div class="outline-text-3" id="text-2-2">
 <p>
 A set of scripts that set up a Raspberry-PI to act as a IMAP client that downloads e-mail, sends custom auto-responses to senders, and forwards the subject line and sender to the travel e-mail address.
 </p>
+</div>
+</div>
 
-<ul class="org-ul">
-<li>TRAMP-Setup
-</li>
-</ul>
-
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3">TRAMP-Setup</h3>
+<div class="outline-text-3" id="text-2-3">
 <p>
 A command line wizard that creates the files needed for the travel-kit. It gathers data that should travel with me including specified e-mail contacts, public keys, and calendars. It creates a custom travel GPG key, auto-responder e-mail, and sign's that e-mail with my current GPG key to authenticate it before transfer to the TRAMP-pi.
 </p>
+</div>
+</div>
 
-<ul class="org-ul">
-<li>TRAMP-Kit
-</li>
-</ul>
-
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4">TRAMP-Kit</h3>
+<div class="outline-text-3" id="text-2-4">
 <p>
 The custom debian image setup used to populate a travel netbook that I can bring with me as my primary computer when traveling.
 </p>
+</div>
+</div>
+</div>
