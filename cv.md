@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CV
-permalink: /cv
+permalink: /cv/
 ---
 
 Download [PDF version](http://seamustuohy.com/files/seamus_tuohy_cv.pdf)

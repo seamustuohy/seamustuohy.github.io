@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blog
-permalink: /blog
+permalink: /blog/
 ---
 
 Informal explorations and thoughts that I wrote down; usually as a reference for coffee shop conversations.
