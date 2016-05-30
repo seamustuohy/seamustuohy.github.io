@@ -6,4 +6,4 @@ permalink: /cv/
 
 Download [PDF version]("/files/seamus_tuohy_cv.pdf")
 
-{% include embedpdf.html source="/files/seamus_tuohy_cv.pdf" width=100 height=800 %}
+{% include embedpdf.html source="http://seamustuohy.com/files/seamus_tuohy_cv.pdf" width=100 height=800 %}
