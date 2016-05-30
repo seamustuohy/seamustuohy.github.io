@@ -3,8 +3,7 @@ layout: page
 title: CV
 permalink: /cv/
 ---
-{% capture cv_link %}{{"/files/seamus_tuohy_cv.pdf" | prepend: site.github.url }}{% endcapture %}
 
-Download [PDF version]({{cv_link}})
+Download [PDF version]("/files/seamus_tuohy_cv.pdf")
 
-{% include embedpdf.html source=cv_link width=100 height=800 %}
+{% include embedpdf.html source="/files/seamus_tuohy_cv.pdf" width=100 height=800 %}
