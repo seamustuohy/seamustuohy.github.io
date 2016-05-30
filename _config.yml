@@ -1,6 +1,6 @@
 title: Seamus Tuohy
 description: "Tech, infrastructure, security, conflict, bubbles, and abyss'."
-sourcecode: "https://github.com/gchauras/much-worse-jekyll-theme"
+sourcecode: "https://github.com/elationfoundation/elationfoundation.github.io"
 
 permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
@@ -16,7 +16,7 @@ author:
 
 # if you don't have any of social below, comment the line
 # facebook: myfacebook
-rss: rss.xml
+rss: feed.xml
 twitter: seamustuohy
 # google: mygoogle
 # instagram: myinstagram
