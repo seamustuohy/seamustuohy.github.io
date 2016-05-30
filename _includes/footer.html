@@ -1,0 +1,9 @@
+<footer class="site-footer">
+    {{ site.description }}<br />
+    {% include icons.html %}
+    {% include social-links.html %}
+    {% if site.analytics.provider and page.analytics != false %}
+     :: Analytics by {{ site.analytics.provider }}
+    {% endif %}
+    All content in this website is licensed [(CC CY 3.0 US) : Creative Commons - Attribution 3.0](https://creativecommons.org/licenses/by/3.0/us/)
+</footer>

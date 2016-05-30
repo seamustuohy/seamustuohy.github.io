@@ -1,0 +1,56 @@
+- name:   "CoPilot"
+  description:  "Design and develop Co-Pilot; an open source tool that enables a digital security trainer to simulate hostile digital environments. This python based cross platform tool for embedded devices was developed over a six month period using a human centered design process. The current prototype provides a wireless hot-spot for trainees, an easy to use interface for customizing and providing censorship, a plugin system that allows developers to easily add new censorship and surveillance functionality, and pre-loaded DNS censorship plugins for DNS Blocking and Redirection."
+  image:   "copilot_logo.png"
+  note:    ""
+  year:    "2014-2016"
+  project_url:     "http://openinternet.github.io/copilot/"
+  source_url:     "https://github.com/OpenInternet/copilot"
+  display: true
+
+- name:   "SAFETAG"
+  description:  "Chief architect of the SAFETAG digital security risk assessment system which combines traditional risk assessment methodologies with technical penetration testing tools and methods to allow for rapid digital security assessments for low-income, at-risk civil society groups and human rights organizations. SAFETAG is a curricula, a methodology, and a framework for security auditors working with advocacy groups."
+  image:   "SAFETAG_screenshot.png"
+  note:    ""
+  year:    "2014-2016"
+  project_url:     "https://safetag.org/"
+  source_url:     "https://github.com/OpenInternet/SAFETAG/"
+  display: true
+
+- name:   "Tor Anomaly Detection - Rewrite & Demo Visualization"
+  description:  "Rewrote and created a new interactive data-visualization of the Tor projects  [anomaly-based censorship-detection system](https://research.torproject.org/techreports/detector-2011-09-09.pdf)  and [existing visualization](https://metrics.torproject.org/userstats-relay-country.html). I took on this side-project after hearing that multiple statisticians had attempted to update the code, but had given up because the [code-base](https://gitweb.torproject.org/metrics-web.git/tree/modules/clients/detector.py) was complex and badly documented. I focused on making the existing code cleaner and comprehensively documented. I used the high-performance data analysis library pandas in the rewrite which speed up the data analysis considerably and allowed me to integrate previously external \"preparation\" scripts written in R directly into the code."
+  image:   "tor_anomaly_graph.png"
+  note:    ""
+  year:    "2015"
+  project_url:     "http://seamustuohy.com/tor_anomaly/"
+  source_url:     "https://github.com/elationfoundation/tor_anomaly"
+  display: true
+
+- name:   "Commotion Setup Wizard"
+  description:  "Lead the design and implementation of user-facing aspects of Commotion OpenWRT embedded router software to create a unified user interface, a Commotion-OpenWRT first-run configuration wizard, and a Commotion branded network visualizer."
+  image:   "commotion_LuCI_wizard.png"
+  image_caption:   "Commotion Router Setup Page - Copyright The Open Technology Institute (CC BY-SA 2.5)"
+  note:    ""
+  year:    "2014-2012"
+  project_url:     "https://commotionwireless.net/docs/cck/installing-configuring/configure-commotion/"
+  source_url:     "https://github.com/opentechinstitute/luci-commotion"
+  display: true
+
+- name:   "Commotion Demonstration Network Data Collector"
+  description:  "Prototyped a data collector for commotion wireless demonstration and test networks. The demonstration network data collector is a two part code-base. The first component is the test harness. The harness is a python automated test framework that will be run on a raspberry-pi (or other debian installed device) that is connected to a demonstration or test network."
+  image:   "magicnet-2014-oldmain-viz.png"
+  image_caption:   "A visualization of a mesh network - Copyright The Open Technology Institute (CC BY-SA 2.5)"
+  note:    ""
+  year:    "2014"
+  project_url:     "https://github.com/opentechinstitute/Demo-Network-Data-Collector"
+  source_url:     "https://github.com/opentechinstitute/Demo-Network-Data-Collector"
+  display: false
+
+- name:   "OpenThreads"
+  description:  "Designed and implemented an open-source platform to provide analysis and visualization of listserv archives to support a research project to examine the impact of gender in the open-geo software community."
+  image:   "openthreads_title.jpg"
+  image_caption:   "Open Threads Logo"
+  note:    ""
+  year:    "2014"
+  project_url:     "https://github.com/elationfoundation/openThreads"
+  source_url:     "https://github.com/elationfoundation/openThreads"
+  display: true

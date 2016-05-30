@@ -1,0 +1,102 @@
+.site-footer {
+    font-size: $vsmall_font_size;
+    color: $text-light-color;
+    border-top: 1px solid $line-color;
+    padding-top: $spacing-unit;
+    float: none;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:  0;
+    margin-bottom:$spacing-unit;
+    text-align: center;
+    @extend %clearfix;
+}
+
+.site-footer a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.site-footer a:hover {
+    color: $url-hover-color;
+    text-decoration: underline;
+}
+
+
+.icon {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  fill: #000;
+  text-align: center;
+  color: #000;
+  margin: 7px auto;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+.social-links > .link {
+  margin: 0;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+}
+.social-links > .link:hover > .icon {
+  fill: #4b0082;
+}
+.social-links > .link:hover:before {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  white-space: nowrap;
+}
+.social-links > .link:before {
+  content: attr(data-title);
+  display: inline-block;
+  position: absolute;
+  bottom: -34px;
+  left: -6px;
+  margin: 0 auto;
+  font-size: 13px;
+  padding: 3px 10px;
+  background: #222;
+  color: #fff;
+  border-radius: 2px;
+  height: 22px;
+  line-height: 22px;
+  opacity: 0;
+  -webkit-transition: opacity 150ms linear, -webkit-transform 150ms linear, -webkit-transform 150ms linear;
+          transition: opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear;
+  -webkit-transform: translate3d(0, -8px, 0);
+          transform: translate3d(0, -8px, 0);
+  z-index: 99;
+}
+.social-links > .link:after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 13px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 6px solid #222;
+  opacity: 0;
+  -webkit-transition: opacity 150ms linear, -webkit-transform 150ms linear, -webkit-transform 150ms linear;
+          transition: opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear;
+  -webkit-transform: translate3d(0, -8px, 0);
+          transform: translate3d(0, -8px, 0);
+  z-index: 100;
+}
+.social-links > .link:hover:after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.social-links > .icon {
+  -webkit-transition: all ease-in-out 0.2s;
+          transition: all ease-in-out 0.2s;
+}

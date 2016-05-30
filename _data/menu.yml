@@ -1,0 +1,18 @@
+- title: "CV"
+  href: "/cv/"
+
+- title: "Projects"
+  href: "/projects/"
+
+- title: "Blog"
+  href: "/blog/"
+
+# - title: "Consulting"
+#   href: "/consulting/"
+
+
+  # subcategories:
+  #  - subtitle: "Item 1"
+  #    subhref: "/miscellany/item-1/"
+  #  - subtitle: "Item 2"
+  #    subhref: "/miscellany/item-2/"

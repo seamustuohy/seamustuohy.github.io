@@ -1,48 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <meta name="description" content="Seamus Tuohy's Website" />
-  <meta name="keywords" content="code,mesh,peace,software,dialogue,facilitation" />
-  <meta name="author" content="Seamus Tuohy" />
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
-  <script src="/assets/js/social.js" charset="utf-8"></script>
-  <script src="/assets/js/visual.js" charset="utf-8"></script>
-  <title>Seamus Tuohy - A website</title>
-</head>
+<!DOCTYPE html>
+<html>
 
-<body>
-  <div id="wrap">
-    <div id="header">
-    	 <p id="toplinks">
-	      </p>
-		<div class="slogan">
-		       <a href="/writing.html" class="blue">writing</a> ||
-		       <a href="/"class="white">s2e</a> ||
-		       <a href="/projects.html" class="orange">projects</a>
-                </div>
+  {% include head.html %}
+
+  <body>
+  <div class="page">
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    {% include analytics.html %}
     </div>
-
-<div id="content">
-  {{ content }}
-</div>
-
-<div id="isotype">
-  <div id="icon_scroll" class="icon_static">
-	<!--Twitter Birdy-->
-	<image src="/images/twitter_bird.png" alt="post highlighted string to twitter" id="tweet" style="display:none;" onClick="tweet_me()">
-  </div>
-</div>
-
-
-<div id="footer">
-<a href="http://twitter.com/seamustuohy">twitter</a> ||
-<a href="/about.html">about</a> ||
-<a href="https://github.com/elationfoundation">github</a>
-</div>
-</div>
-
-</body>
+  </body>
 
 </html>
-
