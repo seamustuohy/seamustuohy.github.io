@@ -10,8 +10,8 @@ Hello, there. I’m seamus tuohy. I’m a technologist and researcher in Washing
 
 **version 1**
 
-My focus’ include internet access, privacy, and censorship circumvention; information and operational security; and the intersection between human rights and technology. I also have a deep interest in the coordinated collection and sharing of threat information sharing.
+My focus’ include internet access, privacy, and censorship circumvention; information and operational security; and the intersection between human rights and technology. I also have a deep interest in the coordinated collection and sharing of threat information.
 
 **Version 2**
 
-My focus' include the intersection between human rights and technology; supporting free access and exchange of knowledge; Internet measurement and research; and censorship circumvention, privacy, and security practices and tools. I also have a deep interest in the coordinated collection and sharing of threat information sharing.
+My focus' include the intersection between human rights and technology; supporting free access and exchange of knowledge; Internet measurement and research; and censorship circumvention, privacy, and security practices and tools. I also have a deep interest in the coordinated collection and sharing of threat information.
