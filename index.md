@@ -12,4 +12,4 @@ With extensive experience in  problem identification, resource development, tech
 
 If you have concerns and projects related to internet access, privacy, and censorship circumvention; or information and operational security; I can help. I also have a deep interest in the coordinated collection and sharing of threat information.
 
-I offer a range of services, but every project is tailored to my clients needs. If you know you need assistance and you want to work with me to figure out how I can help you accomplish your goals send me an e-mail at [hello@seamustuohy.com](mailto:{{ site.email }}).
+I offer a [range of services](http://seamustuohy.com/consulting/), but every project is tailored to my clients needs. If you know you need assistance and you want to work with me to figure out how I can help you accomplish your goals send me an e-mail at [hello@seamustuohy.com](mailto:{{ site.email }}).
