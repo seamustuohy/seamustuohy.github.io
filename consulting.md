@@ -6,7 +6,7 @@ title: Consulting Services
 
 ## What I Do
 
-My mission is to support human rights and free access and exchange of knowledge by offering my professional services to donors, implementers, and technologists. If you seek analysis and /or innovative solutions to help you understand, design, implement, and explain technical and digital-security aspects of human rights, ICT, and/or peacebuilding projects, I can help. Together, we can create viable solutions to the challenges found at the intersection between the public interest and technology.
+My mission is to support human rights and free access and exchange of knowledge by offering my professional services to donors, implementers, and technologists. If you seek analysis and /or innovative solutions to help you understand, design, implement, and explain technical and digital-security aspects of human rights, ICT, and/or peacebuilding projects, I can help. Together, we can create viable solutions to the challenges found at the intersection of the public interest and technology.
 
 ## Services
 

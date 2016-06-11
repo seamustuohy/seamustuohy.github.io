@@ -6,7 +6,7 @@ permalink: /
 
 {% include image.html url="images/headshot_400px.JPG" caption="" max_width="300px" align="right" %}
 
-I’m Seamus Tuohy, a seasoned technologist and researcher focused on bringing my expertise to bear on solutions  at the intersection of human rights and technology.  A holistic and strategic consultant, I bring skills and strategy across the spectrum of complex challenges inherent to examining and intervening in technology-aided human conflict.
+I’m Seamus Tuohy, a seasoned technologist and researcher focused on bringing my expertise to bear on solutions  at the intersection of the public interest and technology.  A holistic and strategic consultant, I bring skills and strategy across the spectrum of complex challenges inherent to examining and intervening in technology-aided human conflict.
 
 With extensive experience in  problem identification, resource development, technical solution development, testing, and implementation, combined with deep knowledge of risk assessment and advisory, my consulting services can help your organization determine priorities and effective processes to address the particular issues on which you are working.
 
