@@ -6,12 +6,10 @@ permalink: /about/
 
 {% include image.html url="images/headshot_400px.JPG" caption="" max_width="300px" align="right" %}
 
-Hello, there. I’m seamus tuohy. I’m a technologist and researcher in Washington DC. I work as a freelance consultant doing technology research, implementation, resource creation, and risk advisory as well as proposal design and writing.
+Hello, I’m Seamus Tuohy, a seasoned technologist and researcher focused on bringing my expertise to bear on solutions  at the intersection of human rights and technology.  A holistic and strategic consultant, I bring skills and strategy across the spectrum of complex challenges inherent to examining and intervening in technology-aided human conflict.
 
-**version 1**
+With extensive experience in  problem identification, resource development, technical solution development, testing, and implementation, combined with deep knowledge of risk assessment and advisory, my consulting services can help your organization determine priorities and effective processes to address the particular issues on which you are working.
 
-My focus’ include internet access, privacy, and censorship circumvention; information and operational security; and the intersection between human rights and technology. I also have a deep interest in the coordinated collection and sharing of threat information.
+If you have concerns and projects related to internet access, privacy, and censorship circumvention; or information and operational security; I can help. I also have a deep interest in the coordinated collection and sharing of threat information.
 
-**Version 2**
-
-My focus' include the intersection between human rights and technology; supporting free access and exchange of knowledge; Internet measurement and research; and censorship circumvention, privacy, and security practices and tools. I also have a deep interest in the coordinated collection and sharing of threat information.
+I offer a range of services, but every project is tailored to my clients needs. If you know you need assistance and you want to work with me to figure out how I can help you accomplish your goals send me an e-mail at [hello@seamustuohy.com](mailto:{{ site.email }}).
