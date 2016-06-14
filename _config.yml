@@ -34,26 +34,6 @@ email: hello@seamustuohy.com
 markdown: kramdown
 highlighter: rouge
 
-# Settings for analytics helper
-# Set 'provider' to the analytics provider you want to use.
-# Set 'provider' to false to turn analytics off globally.
-#
-analytics:
-    provider: 'google'
-    statcounter:
-        sc_project  :
-        sc_security :
-        sc_invisible: 1
-        sc_text     : 2
-    google:
-        tracking_id: 'UA-79296504-1'
-    getclicky:
-      site_id:
-    mixpanel:
-        token: ''
-    piwik:
-        baseURL: '' # Piwik installation address (without protocol)
-        idsite: ''  # the id of the site on Piwik
 
 
 # Settings for comments helper
