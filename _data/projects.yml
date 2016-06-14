@@ -1,5 +1,5 @@
 - name:   "CoPilot"
-  description:  "Design and develop Co-Pilot; an open source tool that enables a digital security trainer to simulate hostile digital environments. This python based cross platform tool for embedded devices was developed over a six month period using a human centered design process. The current prototype provides a wireless hot-spot for trainees, an easy to use interface for customizing and providing censorship, a plugin system that allows developers to easily add new censorship and surveillance functionality, and pre-loaded DNS censorship plugins for DNS Blocking and Redirection."
+  description:  "Designed and developed Co-Pilot; an open source tool that enables a digital security trainer to simulate hostile digital environments. This python based cross platform tool for embedded devices was developed over a six month period using a human centered design process. The current prototype provides a wireless hot-spot for trainees, an easy to use interface for customizing and providing censorship, a plugin system that allows developers to easily add new censorship and surveillance functionality, and pre-loaded DNS censorship plugins for DNS Blocking and Redirection."
   image:   "copilot_logo.png"
   note:    ""
   year:    "2014-2016"
@@ -17,7 +17,7 @@
   display: true
 
 - name:   "Tor Anomaly Detection - Rewrite & Demo Visualization"
-  description:  "Rewrote and created a new interactive data-visualization of the Tor projects  [anomaly-based censorship-detection system](https://research.torproject.org/techreports/detector-2011-09-09.pdf)  and [existing visualization](https://metrics.torproject.org/userstats-relay-country.html). I took on this side-project after hearing that multiple statisticians had attempted to update the code, but had given up because the [code-base](https://gitweb.torproject.org/metrics-web.git/tree/modules/clients/detector.py) was complex and badly documented. I focused on making the existing code cleaner and comprehensively documented. I used the high-performance data analysis library pandas in the rewrite which speed up the data analysis considerably and allowed me to integrate previously external \"preparation\" scripts written in R directly into the code."
+  description:  "Rewrote and created a new interactive data-visualization of the Tor projects  [anomaly-based censorship-detection system](https://research.torproject.org/techreports/detector-2011-09-09.pdf)  and [existing visualization](https://metrics.torproject.org/userstats-relay-country.html). I took on this side-project after hearing that multiple statisticians had attempted to update the code, but had given up because the [code-base](https://gitweb.torproject.org/metrics-web.git/tree/modules/clients/detector.py) was complex and badly documented. I focused on making the existing code cleaner and comprehensively documented. I used the high-performance data analysis library pandas in the rewrite which sped up the data analysis considerably and allowed me to integrate previously external \"preparation\" scripts written in R directly into the code."
   image:   "tor_anomaly_graph.png"
   note:    ""
   year:    "2015"
@@ -30,7 +30,7 @@
   image:   "commotion_LuCI_wizard.png"
   image_caption:   "Commotion Router Setup Page - Copyright The Open Technology Institute (CC BY-SA 2.5)"
   note:    ""
-  year:    "2014-2012"
+  year:    "2012-2014"
   project_url:     "https://commotionwireless.net/docs/cck/installing-configuring/configure-commotion/"
   source_url:     "https://github.com/opentechinstitute/luci-commotion"
   display: true

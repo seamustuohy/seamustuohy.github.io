@@ -1,14 +1,14 @@
-- title: "CV"
-  href: "/cv/"
-
-- title: "Projects"
-  href: "/projects/"
+- title: "Consulting"
+  href: "/consulting/"
 
 - title: "Blog"
   href: "/blog/"
 
-- title: "Consulting"
-  href: "/consulting/"
+- title: "Projects"
+  href: "/projects/"
+
+- title: "CV"
+  href: "/cv/"
 
 
   # subcategories:

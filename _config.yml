@@ -1,5 +1,5 @@
 title: Seamus Tuohy
-description: "Tech, infrastructure, security, conflict, bubbles, and abyss'."
+description: "PGP: 36AC 272E B7CF EDD5 F907 E488 B619 3EC7 3CF0 7AA7"
 sourcecode: "https://github.com/elationfoundation/elationfoundation.github.io"
 
 permalink: blog/:year/:month/:day/:title
@@ -45,8 +45,8 @@ analytics:
         sc_security :
         sc_invisible: 1
         sc_text     : 2
-    google:
-        tracking_id: ''
+    google: true
+        tracking_id: 'UA-79296504-1'
     getclicky:
       site_id:
     mixpanel:
