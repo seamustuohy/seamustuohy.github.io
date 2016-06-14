@@ -39,13 +39,13 @@ highlighter: rouge
 # Set 'provider' to false to turn analytics off globally.
 #
 analytics:
-    provider:
+    provider: 'google'
     statcounter:
         sc_project  :
         sc_security :
         sc_invisible: 1
         sc_text     : 2
-    google: true
+    google:
         tracking_id: 'UA-79296504-1'
     getclicky:
       site_id:
