@@ -49,11 +49,7 @@ permalink: /tags/
             <h3>
                 <a href="{{ post.url }}">
                     {{ post.title }}
-                    <small>{{ post.date | date_to_string }}</small>
-                </a>
-                {% for tag in post.tags %}
-                <a class="tag" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
-                {% endfor %}
+                </a> - <small>{{ post.date | date_to_string }}</small>
             </h3>
         </li>
         {% endif %}
