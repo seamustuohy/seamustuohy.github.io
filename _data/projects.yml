@@ -8,7 +8,7 @@
   display: true
 
 - name:   "SAFETAG"
-  description:  "Chief architect of the SAFETAG digital security risk assessment system which combines traditional risk assessment methodologies with technical penetration testing tools and methods to allow for rapid digital security assessments for low-income, at-risk civil society groups and human rights organizations. SAFETAG is a curricula, a methodology, and a framework for security auditors working with advocacy groups."
+  description:  "One of the chief architects of the SAFETAG digital security risk assessment system. Combining traditional risk assessment methodologies with technical penetration testing tools and methods, this system allows for rapid digital security assessments for low-income, at-risk civil society groups and human rights organizations. SAFETAG is a curricula, a methodology, and a framework for security auditors working with advocacy groups."
   image:   "SAFETAG_screenshot.png"
   note:    ""
   year:    "2014-2016"
@@ -46,7 +46,7 @@
   display: false
 
 - name:   "OpenThreads"
-  description:  "Designed and implemented an open-source platform to provide analysis and visualization of listserv archives to support a research project to examine the impact of gender in the open-geo software community."
+  description:  "Designed and implemented an open-source platform to provide analysis of listserv archives to support a research project to examine the impact of gender in the open-geo software community."
   image:   "openthreads_title.jpg"
   image_caption:   "Open Threads Logo"
   note:    ""

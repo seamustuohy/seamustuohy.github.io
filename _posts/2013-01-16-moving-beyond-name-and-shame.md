@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Moving Beyond Name and Shame
-categories: [tags,shame,libtech]
+tags: [tags,shame,libtech]
 date: 2012-11-14
 post_author: Seamus Tuohy
 lang: en

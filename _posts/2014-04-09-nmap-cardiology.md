@@ -2,7 +2,7 @@
 layout: post
 title: Nmap cardiology
 date: 2014-04-09
-categories: lua nmap script
+tags: lua nmap script
 ---
 
 *NOTE: This post requires a very basic understanding of Lua, or the willingness to not cate about syntax and just follow along for the principles.*

@@ -10,10 +10,10 @@ layout: default
     <p class="post-meta">Description: {{ page.description }}</p>
     {% endif %}
 
-    {% if page.categories %}
-    <p class="post-meta">Categories:
-    {% for cat in page.categories %}
-    <a href="/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
+    {% if page.tags %}
+    <p class="post-meta">Tags:
+    {% for tag in page.tags %}
+        <a href="/tags#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
     {% endfor %}
 
     </p>

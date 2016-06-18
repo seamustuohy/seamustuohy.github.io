@@ -2,7 +2,7 @@
 layout: post
 title: "Open Source-ing Reporta"
 date: 2016-06-04
-categories: [open source, security]
+tags: [open source, security]
 ---
 
 In September of 2015 the International Women’s Media Foundation (IWMF) released an app called [Reporta](https://www.reporta.org/). This journalist focused app implemented a check-in-system, customized alerts, and an SOS button for when the journalist is in distress. The app was [quickly](http://motherboard.vice.com/read/this-new-secure-app-for-journalists-may-not-be-secure-at-all), and [widely](http://www.huffingtonpost.com/entry/reporta-journalism-safety-security_us_56151c22e4b0fad1591a1ebb) criticized by [security](https://twitter.com/theodorosc/status/651102085677719552), [journalism](https://twitter.com/CPJTechnology/status/655138267382190080), and [media-development](https://twitter.com/menacommittee/status/650731692458700800) experts for a variety of reasons. After a [back-and-forth](https://ijnet.org/en/blog/iwmf-responds-security-concerns-about-new-app-reporta) with various [members](https://twitter.com/conflictmedia/status/649982146933837824) of these communities IWMF capitulated and undertook a process of updating the application in an attempt to reflect the feedback they received. This included removing analytics, enhancing encryption, revising data retention procedures, among other things. At the end of this process Reporta ["open-sourced" its code.](https://www.reporta.org/en/news/iwmf-to-make-reporta-open-source/) This is where my interaction with Reporta began.

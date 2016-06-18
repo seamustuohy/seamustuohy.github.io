@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ListServ's and Python Regular Expressions
-categories: [python,regular expressions, email]
+tags: [python,regular expressions, email]
 date: 2013-03-17
 post_author: Seamus Tuohy
 lang: en

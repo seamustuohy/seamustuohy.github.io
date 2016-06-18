@@ -2,7 +2,7 @@
 layout: post
 title: What's in a Browser
 date: 2014-03-30
-categories: tutorial cookies header
+tags: tutorial cookies header
 ---
 
 I was recently asked to provide some instructions on how one could easily monitor ones own web traffic. In the past I have written about how to use my one true love, wireshark, for testing encryption on the Commotion project. But, a packet to packet stream of data not easy to grok for those new to the field. So, this short piece is on how to use the chrome browser, and a single extension, to get an idea of what traffic you are sending to the internet. If you follow along you will learn the basics of how to see what data the websites you visit are requesting, and where they are sending it too. We will focus on how to best search for the data you are looking at, so that you are better prepared to start your own excursions into the internals of the internet.

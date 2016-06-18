@@ -2,7 +2,7 @@
 layout: post
 title: Welcome to Malin Grey
 date: 2013-06-11
-categories: obfuscation privacy
+tags: obfuscation privacy
 ---
 
 ### How the recently leaked NSA surveillance programs will re-embolden a librarians worst enemy.

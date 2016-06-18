@@ -2,7 +2,7 @@
 layout: post
 title: Speeding up Org-Mode Agenda Skip Project with Local Variables
 date: 2015-07-12
-categories: script org-mode emacs
+tags: script org-mode emacs
 ---
 
 I had built an org-mode agenda function that looked through one org file that was filled with projects I was tracking and then filtering an org-mode agenda based upon the state of those projects.

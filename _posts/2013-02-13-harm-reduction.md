@@ -2,7 +2,7 @@
 layout: post
 title: Harm Reduction
 date: 2013-02-13
-categories: drugs harm-reduction health tools
+tags: drugs harm-reduction health tools
 ---
 
 Our community creates tools for those who believe they are at risk of violence and oppression. This is a lofty and near impossible environment to work cleanly within. Tools are quickly outdated, vulnerabilities are horded by the most powerful governments in the world for exploitation, tactics for censorship and surveillance constantly evolve, and new circumvention tools are being developed and used before older tools have had a chance to be properly reviewed by the security community. In this environment code and educational materials are always going to be found lacking in one way or another. Too often we take a stance where we attribute the blame for possible future outcomes of an exploited vulnerability, or misleading article on the authors.

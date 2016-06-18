@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Cost of Mesh Networks
-categories: [mesh,cost,price,hardware]
+tags: [mesh,cost,price,hardware]
 date: 2012-11-14
 post_author: Seamus Tuohy
 lang: en

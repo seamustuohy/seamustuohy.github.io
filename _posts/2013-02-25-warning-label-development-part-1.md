@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Warning Label Development, Part 1
-categories: [warning label,security,anonymity,privacy,research]
+tags: [warning label,security,anonymity,privacy,research]
 date: 2013-02-25
 lang: en
 ---
