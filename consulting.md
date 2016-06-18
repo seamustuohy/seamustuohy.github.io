@@ -38,12 +38,11 @@ Specific services I am equipped to provide include:
 
 * **Software Development** - providing organizations with open-source software development support that can include building prototypes, adding key features to existing tools, identifying, troubleshooting, and addressing existing bugs, codebase cleanup, and a variety of other possible solutions to suit your particular requirements; and
 
-* **Technology Aided Monitoring** - develop custom data collection and parse pipelines and tools to support teams to conduct ongoing monitoring of developments related to organizations’ work and goals.
-
+* **Supporting Information Sharing** - facilitating the design of cross organization/project information sharing programs that can include creating and implementing data strategies, creating shared standards and frameworks, and designing and building data flows.
 
 ## Proposal Design and Writing
 
-* **M&E Design for A**t-Risk Communities - design monitoring and evaluation plans for at-risk or vulnerable populations that are risk-aware, privacy-preserving, and ethically appropriate while still enabling clients to tell the story of change;
+* **M&E Design for At-Risk Communities** - design monitoring and evaluation plans for at-risk or vulnerable populations that are risk-aware, privacy-preserving, and ethically appropriate while still enabling clients to tell the story of change;
 
 * **Program/Project Design** - design or redesign stand-alone, multi-component, or single component programs or activities based on organizations’ capacity and donor interest; and
 
