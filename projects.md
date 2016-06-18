@@ -16,6 +16,11 @@ title: Projects
 ### [{{ proj.name }}]({{proj.project_url}})
 
 {{proj.year}} - [source]({{proj.source_url}})
+{% if proj.active %}
+Status: {{proj.project_stage}} - Active
+{% else %}
+Status: {{proj.project_stage}} - Inactive
+{% endif %}
 
 {{proj.description}}
 {% endif %}

@@ -5,6 +5,8 @@
   year:    "2014-2016"
   project_url:     "http://openinternet.github.io/copilot/"
   source_url:     "https://github.com/OpenInternet/copilot"
+  project_stage: "Operation"
+  active: true
   display: true
 
 - name:   "SAFETAG"
@@ -14,6 +16,8 @@
   year:    "2014-2016"
   project_url:     "https://safetag.org/"
   source_url:     "https://github.com/OpenInternet/SAFETAG/"
+  project_stage: "Operation"
+  active: true
   display: true
 
 - name:   "Tor Anomaly Detection - Rewrite & Demo Visualization"
@@ -23,6 +27,8 @@
   year:    "2015"
   project_url:     "http://seamustuohy.com/tor_anomaly/"
   source_url:     "https://github.com/elationfoundation/tor_anomaly"
+  project_stage: "Prototype"
+  active: false
   display: true
 
 - name:   "Commotion Setup Wizard"
@@ -33,6 +39,8 @@
   year:    "2012-2014"
   project_url:     "https://commotionwireless.net/docs/cck/installing-configuring/configure-commotion/"
   source_url:     "https://github.com/opentechinstitute/luci-commotion"
+  project_stage: "Completed"
+  active: false
   display: true
 
 - name:   "Commotion Demonstration Network Data Collector"
@@ -43,7 +51,9 @@
   year:    "2014"
   project_url:     "https://github.com/opentechinstitute/Demo-Network-Data-Collector"
   source_url:     "https://github.com/opentechinstitute/Demo-Network-Data-Collector"
+  project_stage: "Prototype"
   display: false
+  active: false
 
 - name:   "OpenThreads"
   description:  "Designed and implemented an open-source platform to provide analysis of listserv archives to support a research project to examine the impact of gender in the open-geo software community."
@@ -53,4 +63,15 @@
   year:    "2014"
   project_url:     "https://github.com/elationfoundation/openThreads"
   source_url:     "https://github.com/elationfoundation/openThreads"
+  project_stage: "Prototype"
   display: true
+  active: false
+
+# Project Stages
+#  Concept
+#  Design
+#  Prototype
+#  Development
+#  Operation
+#  Evaluation
+#  Completed
