@@ -38,7 +38,7 @@ Specific services I am equipped to provide include:
 
 * **Software Development** - providing organizations with open-source software development support that can include building prototypes, adding key features to existing tools, identifying, troubleshooting, and addressing existing bugs, codebase cleanup, and a variety of other possible solutions to suit your particular requirements; and
 
-* **Supporting Information Sharing** - facilitating the design of cross organization/project information sharing programs that can include creating and implementing data strategies, creating shared standards and frameworks, and designing and building data flows.
+* **Supporting Information Sharing** - facilitating the design of cross organization/project information sharing programs that can include creating and implementing data strategies, creating shared standards and frameworks, designing and building data flows, and addressing security and privacy concerns.
 
 ## Proposal Design and Writing
 
