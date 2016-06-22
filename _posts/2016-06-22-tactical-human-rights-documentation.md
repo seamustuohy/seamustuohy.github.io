@@ -1,6 +1,6 @@
 ---
 layout: post
-title:"Tactical Human Rights Documentation"
+title: "Tactical Human Rights Documentation"
 date: 2016-06-22
 tags: [threat intel, human rights, data]
 ---
