@@ -1,6 +1,6 @@
 title: Seamus Tuohy
 description: ""
-sourcecode: "https://github.com/elationfoundation/elationfoundation.github.io"
+sourcecode: "https://github.com/seamustuohy/elationfoundation.github.io"
 
 permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
@@ -24,7 +24,7 @@ twitter: seamustuohy
 linkedin: seamustuohy
 # youtube: myyoutube
 # spotify: myspotify
-github: elationfoundation
+github: seamustuohy
 medium: seamustuohy
 # vimeo: myvimeo
 email: hello@seamustuohy.com

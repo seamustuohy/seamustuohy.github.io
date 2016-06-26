@@ -25,8 +25,8 @@
   image:   "tor_anomaly_graph.png"
   note:    ""
   year:    "2015"
-  project_url:     "http://seamustuohy.com/tor_anomaly/"
-  source_url:     "https://github.com/elationfoundation/tor_anomaly"
+  project_url:     "http://seamustuohy.github.io/tor_anomaly/"
+  source_url:     "http://seamustuohy.com/tor_anomaly"
   project_stage: "Prototype"
   active: false
   display: true
@@ -61,8 +61,8 @@
   image_caption:   "Open Threads Logo"
   note:    ""
   year:    "2014"
-  project_url:     "https://github.com/elationfoundation/openThreads"
-  source_url:     "https://github.com/elationfoundation/openThreads"
+  project_url:     "https://github.com/seamustuohy/openThreads"
+  source_url:     "https://github.com/seamustuohy/openThreads"
   project_stage: "Prototype"
   display: true
   active: false
