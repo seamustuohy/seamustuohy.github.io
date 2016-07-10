@@ -15,6 +15,8 @@ I did not choose resources for this list based upon their quality.  **In fact, I
 
 Many of the resources below have been helpful to me in my process of building my thoughts on road-map development for small organizations.  Some because they were high-quality, others because they had interesting perspectives, others simply because they gave me new terms to use in online searches. I offer them here so that others can build their own opinions.
 
+{:toc}
+
 ### Security-Awareness Culture
 
 Road-map development is primarily a process where you compare your prioritized list of risk and the capacity of the organization to implement change. You are working with the organization to build a path forward that will contribute to their ability to continue to develop greater security. It is as much about developing a culture of security as it is fixing the specific problems.
