@@ -5,17 +5,13 @@ date: 2016-07-10
 tags: [link list, infosec, security, orgsec]
 ---
 
-The road-map development process that comes after an audit or assessment can be daunting. I recently was asked to put together:
-
-```Seamus-sourced reccys on external resources for post-audit work that helps with prioritization and organization of actions, and if it has anything extra for low-resourced orgs or orgs in crisis, so much the better.```
+The road-map development process that comes after an audit or assessment can be daunting. I recently was asked to put together: *"Seamus-sourced reccys on external resources for post-audit work that helps with prioritization and organization of actions, and if it has anything extra for low-resourced orgs or orgs in crisis, so much the better."*
 
 Below is a Sunday morning link scrape from my personal notes. This does not cover personal security or inter-group/collaboration security practices. This is only resources relevant in some way to organizational road-map development for small organizations.
 
 I did not choose resources for this list based upon their quality.  **In fact, I find some of these painfully simplistic and many of them are outdated.** Even the worst of them provide a glimpse at a framework that was used to prioritize risks and then build a plan for implementation.
 
 Many of the resources below have been helpful to me in my process of building my thoughts on road-map development for small organizations.  Some because they were high-quality, others because they had interesting perspectives, others simply because they gave me new terms to use in online searches. I offer them here so that others can build their own opinions.
-
-{:toc}
 
 ### Security-Awareness Culture
 
