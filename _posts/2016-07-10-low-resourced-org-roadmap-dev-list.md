@@ -13,7 +13,13 @@ I did not choose resources for this list based upon their quality.  **In fact, I
 
 Many of the resources below have been helpful to me in my process of building my thoughts on road-map development for small organizations.  Some because they were high-quality, others because they had interesting perspectives, others simply because they gave me new terms to use in online searches. I offer them here so that others can build their own opinions.
 
-### Security-Awareness Culture
+* [Security-Awareness Culture](#security-awareness-culture)
+* [Organizational Security Mitigation Guidance and Checklists](#organizational-security-mitigation-guidance-and-checklists)
+* [Security Process Guidance](#security-process-guidance)
+* [Feeds, Lists, and Places to Learn](#feeds-lists-and-places-to-learn)
+
+
+## Security-Awareness Culture
 
 Road-map development is primarily a process where you compare your prioritized list of risk and the capacity of the organization to implement change. You are working with the organization to build a path forward that will contribute to their ability to continue to develop greater security. It is as much about developing a culture of security as it is fixing the specific problems.
 
@@ -85,7 +91,7 @@ Implementing successful security awareness in Your Company Implementing a succes
 
 Even companies with extensive, well-funded security awareness programs fall victim to attacks involving phishing, weak passwords and SQL injection, presumably the primary targets of user education.  Either their users don't have the skills to avoid these pitfalls, or they lack the motivation to apply those skills.  Psychologists and other social scientists have studied the roots of effective behavioral change and have solutions to offer. By exploring personal, social and environmental sources of motivation and abili..
 
-### Organizational Security Mitigation Guidance and Checklists
+## Organizational Security Mitigation Guidance and Checklists
 
 Existing guidance and checklists provide a decent baseline that you can use to check your prioritization of things to address. Many are focused on larger organizations and governments, so be mindful of the capacity required to carry out recommended mitigation's when you are reading them.
 
@@ -283,7 +289,7 @@ ENISA provides recommendations on cybersecurity, supports policy development and
 
 In this repository we provide generalized IT policies adapted from those used internally by our IT staff in hopes that they will come in handy for other organizations, and especially for open-source projects who rely on volunteer admin efforts to manage their infrastructure.
 
-### Security Process Guidance
+## Security Process Guidance
 
 At the average level of insecurity that international CSO's have audit results will be out of date in 3 to 6 months. Their threat landscape and level of security is in constant flux and they don't have the capacity to become security experts to fix it. They don't even have the staff time to re-check a security practice and policy checklist every 6 months. Reading through the approaches and challenges to building security process' will help you get an idea of how to help an organization put effective systems in place without making them so onerous that they are abandoned.
 
@@ -443,7 +449,7 @@ We decided to start with our email. Securing an organizations’ emails isn’t 
 
 I'm here to talk to you about computer security - and I don't mean just locking it up in a closet! I'm talking about making sure that the information you keep on your computer(s) is safe, that the only people who see that information are your employees, and making sure that the information is available when they need it. I'm also talking about making sure that no one (make that no hacker) is using your computer to do things that you don't know about. Things that might make you legally liable for someone else's actions....
 
-### Feeds, Lists, and Places to Learn
+## Feeds, Lists, and Places to Learn
 
 This was literally two hours of going through my old notes and archive of links on a Sunday morning. This is FAR from comprehensive and there are many places that collect and share information and links like this.
 
