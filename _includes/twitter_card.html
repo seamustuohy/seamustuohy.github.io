@@ -11,7 +11,8 @@
 <meta name="twitter:site" content="@seamustuohy" />
 <meta name="twitter:creator" content="@seamustuohy">
 <meta name="twitter:title" content="{{ page.title }}" />
-{% if post.excerpt %}
+{% if post.content contains '<!--more-->' %}
+  {{ post.content | split:'<!--more-->' | first }}
     <meta name="twitter:description" content="{{ post.excerpt }}" />
 {% elsif page.description %}
     <meta name="twitter:description" content="{{ page.description }}" />
