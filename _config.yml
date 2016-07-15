@@ -6,7 +6,7 @@ default_image: "http://seamustuohy.com/images/headshot_400px.JPG"
 permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
 
-url: "http://seamustuohy.com"     # the base hostname & protocol for your site
+url: "seamustuohy.com"     # the base hostname & protocol for your site
 baseurl: ""                   # the subpath of your site, e.g. /blog
 
 
