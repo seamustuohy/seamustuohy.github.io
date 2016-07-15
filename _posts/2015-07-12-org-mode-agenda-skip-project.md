@@ -7,6 +7,8 @@ tags: script org-mode emacs
 
 I had built an org-mode agenda function that looked through one org file that was filled with projects I was tracking and then filtering an org-mode agenda based upon the state of those projects.
 
+<!--more-->
+
 Every task in my agenda file is linked to a project using a category.  When I added this function to my agenda originally I added an skip function that iterated through the my projects file to find applicable projects. This caused my agenda's to move incredibly slow. The slow code looked like this.
 
 {% highlight elisp %}

@@ -7,6 +7,8 @@ tags: bash scraping script
 
 My current work follows federal government closures because we are in DC. We recently had a snow day at the office that I missed because the e-mail went out before I left the house. Well, I had enough and decided to automate the e-mails the instant the website changed to make sure that I never missed a snow day again.
 
+<!--more-->
+
 First I went to the site that gives the current status.
 
 

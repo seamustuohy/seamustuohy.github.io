@@ -5,7 +5,7 @@ date: 2016-07-10
 tags: [link list, infosec, security, orgsec]
 ---
 
-The road-map development process that comes after an audit or assessment can be daunting. I recently was asked to put together: *"Seamus-sourced reccys on external resources for post-audit work that helps with prioritization and organization of actions, and if it has anything extra for low-resourced orgs or orgs in crisis, so much the better."*
+The road-map development process that comes after an audit or assessment can be daunting. I recently was asked to put together: *"Seamus-sourced reccys on external resources for post-audit work that helps with prioritization and organization of actions, and if it has anything extra for low-resourced orgs or orgs in crisis, so much the better."* <!--more-->
 
 Below is a Sunday morning link scrape from my personal notes. This does not cover personal security or inter-group/collaboration security practices. This is only resources relevant in some way to organizational road-map development for small organizations.
 

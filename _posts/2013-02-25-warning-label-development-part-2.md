@@ -14,6 +14,8 @@ website](https://web.archive.org/web/20160529221156/https://commotionwireless.ne
 
 In [Part 1](https://web.archive.org/web/20160529221234/https://commotionwireless.net/blog/2013/02/25/warning-label-development-part-1/), we came up with a list of security features Commotion lacked. We took this list of unimplemented security features and used OSHA's hazard communication guide to clarify our language [^9]:
 
+<!--more-->
+
 -   Instructions are more likely to be followed if consequences are described.
 -   Sentences that include a long string of effects or other items can be made clearer by putting them into list.
 -   Keep sentences short and direct. Use no more than two subordinate clauses. Use the active voice as much as possible. Use short words of one or two syllables as much as possible. Choose commonly used, familiar words, but avoid colloquialisms and slang.

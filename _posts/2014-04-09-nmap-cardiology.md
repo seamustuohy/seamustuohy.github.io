@@ -5,11 +5,13 @@ date: 2014-04-09
 tags: lua nmap script
 ---
 
-*NOTE: This post requires a very basic understanding of Lua, or the willingness to not cate about syntax and just follow along for the principles.*
+*NOTE: This post requires a very basic understanding of Lua, or the willingness to not care about syntax and just follow along for the principles.*
 
 ## Using nmap scripting to test the heartbleed bug
 
 A few days ago the [Heartbleed bug](http://heartbleed.com/) came out which allowed attackers to read the memory of systems using a vulnerable version of OpenSSL. *Reading the memory* will allow attackers to steal even the encryption keys which make *all* secure traffic *ever* monitored to and from one of these systems decryptable. But, that happened a whole two days ago (as of when I put fingers to keyboard on this piece). If you are reading this blog, you probobly know that. So, what I decided to do this morning is to build a script to identify, and notify, vulnerable systems.
+
+<!--more-->
 
 To start I need to gather my tools. Nmap has a robust [script library](http://nmap.org/nsedoc/) already, and I don't want to write what I don't have to. Heartbleed was orginally released on April 7th 2014. It is 7:50am on April 9th and there is already a Heartbleed vulnerability scripted up and uploaded to the script library&#x2026; I am as dissapointed as you are. But, since this was supposed to simply be a nmap scripting lesson, and open source is rooted in reuse, we are not going to re-implement this from scratch. Instead, we are going to use this script to make a vulnerability notifier.
 
