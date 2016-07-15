@@ -6,8 +6,10 @@ date: 2012-11-14
 post_author: Seamus Tuohy
 lang: en
 ---
-z
+
 I have been thinking about Asher Wolf's recent [blog post](http://asherwolf.net/dear-hacker-community-we-need-to-talk/101/) frequently since it came out. I believe that many in the community have. Being a nearly silent member of the Liberation Technology community I debated whether adding another voice to this discussion would be productive. But, after seeing this opportunity for dialogue be absorbed by the usual patterns of accusations and shaming I decided to become another voice in our community.
+
+<!--more-->
 
 “Naming and shaming” is a strategy that is commonly praised in our community. Culturally it makes sense in a community which holds identity and privacy so sacredly, and in which, social ostracism is so common. It is on the principle of openness that I have seen the most common consensus on the necessity of naming and shaming. And, through this, proponents of closed code in our community are outcast. "Open your heart and code to peer review, and you can be one of us again." Their names and projects are appended to scarlet lists across the internet, shouted from twitter accounts, and occasionally codified in seemingly [parodical sites.](http://issilentcircleopensourceyet.com/) Because “naming and shaming” is at its core public ostracism it is only as powerful as the desire to re-enter the community, and it is only as useful as the public's willingness to look to us for trusted projects.
 
