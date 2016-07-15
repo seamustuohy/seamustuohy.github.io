@@ -8,7 +8,7 @@ exclude: ["Makefile", "README.md"]
 
 url: "seamustuohy.com"     # the base hostname & protocol for your site
 baseurl: ""                   # the subpath of your site, e.g. /blog
-
+excerpt_separator: <!--more-->
 
 # if you don't have any of social below, comment the line
 # facebook: myfacebook
