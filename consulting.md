@@ -2,6 +2,7 @@
 layout: page
 permalink: /consulting/
 title: Consulting Services
+description: "Specific services I am equipped to provide."
 ---
 
 ## What I Do

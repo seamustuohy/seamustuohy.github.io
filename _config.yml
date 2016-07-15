@@ -1,6 +1,7 @@
 title: Seamus Tuohy
-description: ""
+description: "The personal website of Seamus Tuohy."
 sourcecode: "https://github.com/seamustuohy/elationfoundation.github.io"
+default_image: "http://seamustuohy.com/images/headshot_400px.JPG"
 
 permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]

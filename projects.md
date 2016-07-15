@@ -2,6 +2,7 @@
 layout: page
 permalink: /projects/
 title: Projects
+description: "Highlighted projects and tools I have worked on."
 ---
 
 {% for proj in site.data.projects %}

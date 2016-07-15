@@ -2,6 +2,7 @@
 layout: page
 title: CV
 permalink: /cv/
+description: "Seamus Tuohy's curriculum vitae"
 ---
 
 Download [PDF version](http://seamustuohy.com/files/seamus_tuohy_cv.pdf)
