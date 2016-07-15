@@ -1,7 +1,7 @@
 {% if post.header_image %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ post.header_image }}" />
-{% elseif post.header_image_small %}
+{% elsif post.header_image_small %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ post.header_image_small }}" />
 {% else %}
@@ -13,7 +13,7 @@
 <meta name="twitter:title" content="{{ page.title }}" />
 {% if post.excerpt %}
     <meta name="twitter:description" content="{{ post.excerpt }}" />
-{% elseif page.description %}
+{% elsif page.description %}
     <meta name="twitter:description" content="{{ page.description }}" />
 {% else %}
     <meta name="twitter:description" content="{{ site.description }}" />
