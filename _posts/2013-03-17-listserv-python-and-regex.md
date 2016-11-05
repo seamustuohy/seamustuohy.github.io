@@ -9,6 +9,8 @@ lang: en
 
 List-servs are important for digital communities. Their archives form a repository of their communicative history. Luckily, the medium of e-mail adds some structure to the otherwise messy medium of human communication. I will be exploring how to take the text based list-serv archive and derive some understanding about the community behind it.
 
+<!--more-->
+
 This post will explore how I took plain text downloads of a list serv archive and used regular expressions to create a data structure that is easier to parse through. I will be using the language python because I find it a clear language to teach in. For newer programmers who may be reading this post I should point out that this can be done in many languages. I, for instance, did the first pass of this work in bash shell scripting, which I would not recommend.
 
 Before we start we need to get some test data from a list-serv archive.  A list-serv archive page contains a set of text links for download. For this I used the command line tool wget. (Don't type the $)

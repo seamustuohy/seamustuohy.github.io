@@ -1,0 +1,20 @@
+{% if post.header_image %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ post.header_image }}" />
+{% elsif post.header_image_small %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ post.header_image_small }}" />
+{% else %}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="{{ site.default_image }}" />
+{% endif %}
+<meta name="twitter:site" content="@seamustuohy" />
+<meta name="twitter:creator" content="@seamustuohy">
+<meta name="twitter:title" content="{{ page.title }}" />
+{% if page.excerpt %}
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}" />
+{% elsif page.description %}
+    <meta name="twitter:description" content="{{ page.description }}" />
+{% else %}
+    <meta name="twitter:description" content="{{ site.description }}" />
+{% endif %}

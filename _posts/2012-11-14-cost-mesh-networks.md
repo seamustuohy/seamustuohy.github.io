@@ -11,6 +11,8 @@ lang: en
 
 A common question Commotion technologists hear is “How much does it cost to set up a mesh network?” Like any other infrastructure, the cost of organizing a mesh network varies depending on the desired coverage area and what services the network will host. But, there are some basic figures to keep in mind while you plan a mesh network. The following five points outline the costs of a “last-mile” network designed to spread internet connectivity throughout a mesh network.
 
+<!--more-->
+
 ### Hardware
 
 A mesh network requires routers. Current Commotion test deployments use  Ubiquiti Picostations and Nanostations. These run between $75-$85 each.  We use these routers because they are low cost, but high quality, outdoor routers. If the network is open to all who walk by, and you have a high rooftop that acts as an infrastructure “mesh node” —used primarily to establish a network “backbone” as opposed to providing client access— you will also want a router between that rooftop and the ground so that people can access the network when walking by on the ground level. They may see the “mesh node”, but their phone or device may not be powerful enough to send data to it. This ground level access point router can be less powerful than the Pico/Nanostations up on the rooftops.

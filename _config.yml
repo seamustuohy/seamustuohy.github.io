@@ -1,18 +1,14 @@
-title: Seamus Tuohy
-description: ""
+title: "Seamus Tuohy"
+description: "The personal website of Seamus Tuohy."
 sourcecode: "https://github.com/seamustuohy/elationfoundation.github.io"
+default_image: "http://seamustuohy.com/images/headshot_400px.JPG"
 
 permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
 
-url: "http://seamustuohy.com"     # the base hostname & protocol for your site
+url: "seamustuohy.com"     # the base hostname & protocol for your site
 baseurl: ""                   # the subpath of your site, e.g. /blog
-
-author:
-    name:
-    facebook:
-    scholar:
-
+excerpt_separator: <!--more-->
 
 # if you don't have any of social below, comment the line
 # facebook: myfacebook
@@ -33,23 +29,3 @@ email: hello@seamustuohy.com
 # Build settings
 markdown: kramdown
 highlighter: rouge
-
-
-
-# Settings for comments helper
-# Set 'provider' to the comment provider you want to use.
-# Set 'provider' to false to turn commenting off globally.
-#
-comments:
-    provider:
-    disqus:
-      short_name:
-    livefyre:
-      site_id:
-    intensedebate:
-      account:
-    facebook:
-      appid:
-      num_posts: 5
-      width: 580
-      colorscheme: light
