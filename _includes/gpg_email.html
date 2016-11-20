@@ -1,0 +1,11 @@
+<script src="{{ "/js/openpgp.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/contact_me.js" | prepend: site.baseurl }}"></script>
+<div>
+    <textarea id="note" name="Contact_Me" cols="60" rows="15"></textarea>
+</div>
+<div class="buttons">
+    <a class="btn orange" onclick="getEncryptedNote('show')">Encrypt</a>
+    <a class="btn orange"  onclick="getEncryptedNote('mail')">Encrypt and Send</a>
+</div>
+<div id="note_viewer">
+</div>
