@@ -8,7 +8,7 @@ header_image: "http://seamustuohy.com/images/go_board.jpg"
 
 ## Providing Digital Security Guidance to Vulnerable Groups in Changing Environments
 
-There is a lot of uncertainty and fear right now in the US. With the recent election there are many vulnerable civil society organizations and advocacy groups who are looking to protect themselves from a range of unknown threats. These groups are ready to take action but have no concrete threats they can directly respond to. For digital security trainers and advisers like myself this current context can be both good and bad.
+There is a great deal of uncertainty and fear right now in the US. With the recent election there are many vulnerable civil society organizations and advocacy groups who are looking to protect themselves from a range of unknown threats. These groups are ready to take action but have no concrete threats they can directly respond to. For digital security trainers and advisers like myself this current context can be both good and bad.
 
 There are many individuals in the digital security space who are providing general digital security guidance right now to take advantage of this new-found agency. This can be valuable, if the right advice is taken. The effort that the members of these groups go through to adopt the individual security practices and tools recommended now can be wasted effort if these do not respond the future threats that they actually face. And, taking action on inappropriate advice now can lead these newly activated groups to digital security exhaustion.
 
