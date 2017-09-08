@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-You can contact me via e-mail at (hello@prudentinnovation.org).
+You can contact me via e-mail at (hello@seamustuohy.com).
 
 If you contact me via email, I encourage you to use GPG/PGP encryption. If you already use PGP e-mail please [download my public key.]({{ "/PGP/" | prepend: site.baseurl }})
 
