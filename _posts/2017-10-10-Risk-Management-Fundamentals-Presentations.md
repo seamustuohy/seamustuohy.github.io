@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Training Materials: Risk Assessment Fundamentals
+title: "Training Materials: Risk Assessment Fundamentals"
 date: 2017-10-07
 tags: [risk assessment, risk management]
 ---
