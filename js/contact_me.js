@@ -309,7 +309,7 @@ function getEncryptedNote(output_loc) {
         publicKeys: openpgp.key.readArmored(pubkey).keys,
     };
     openpgp.encrypt(options).then(function(ciphertext) {
-        //encrypted_note = ciphertext.data.replace(/(?:\r\n|\r|\n)/g, '\n');
+        encrypted_note = ciphertext.data.replace(/(?:\r\n|\r|\n)/g, '*****');
         if (output_loc == 'show') {
             showEncrypted(ciphertext.data);
         } else {
