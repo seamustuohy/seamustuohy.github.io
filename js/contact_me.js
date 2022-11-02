@@ -311,9 +311,9 @@ function getEncryptedNote(output_loc) {
     openpgp.encrypt(options).then(function(ciphertext) {
         encrypted_note = ciphertext.data.replace(/(?:\r\n|\r|\n)/g, '*****');
         if (output_loc == 'show') {
-            showEncrypted(ciphertext.data);
+            showEncrypted(encrypted_note);
         } else {
-            sendEmail(ciphertext.data);
+            sendEmail(encrypted_note);
         }
     });
 }
