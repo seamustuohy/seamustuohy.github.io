@@ -6,7 +6,7 @@ title: PGP Info
 
 ### Fingerprint
 
-#### 394A 040D D58D 6AAE B728  EE89 AFC7 C360 1794 2D5B
+#### 553 5356 3C9F 3C93 0A1E  ECE8 FC23 EDB0 738F 7013
 
 ### Public Key
 
