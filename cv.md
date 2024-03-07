@@ -5,6 +5,6 @@ permalink: /cv/
 description: "Seamus Tuohy's curriculum vitae"
 ---
 
-Download [PDF version](http://seamustuohy.com/files/seamus_tuohy_cv.pdf)
+Download [PDF version](https://seamustuohy.com/files/seamus_tuohy_cv.pdf)
 
-{% include embedpdf.html source="http://seamustuohy.com/files/seamus_tuohy_cv.pdf" width=100 height=800 %}
+{% include embedpdf.html source="https://seamustuohy.com/files/seamus_tuohy_cv.pdf" width=100 height=800 %}
