@@ -13,7 +13,7 @@ excerpt_separator: <!--more-->
 # if you don't have any of social below, comment the line
 # facebook: myfacebook
 rss: feed.xml
-twitter: seamustuohy
+# twitter: seamustuohy
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
@@ -21,7 +21,7 @@ linkedin: seamustuohy
 # youtube: myyoutube
 # spotify: myspotify
 github: seamustuohy
-medium: seamustuohy
+# medium: seamustuohy
 # vimeo: myvimeo
 email: hello@seamustuohy.com
 
